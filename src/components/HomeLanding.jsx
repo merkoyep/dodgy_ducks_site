@@ -1,6 +1,3 @@
-import hkFestBeforeUrl from '../assets/hkfestbefore.mp4';
-import unknownTeamUrl from '../assets/unknownTeam.png';
-
 export default function HomeLanding({ onViewSeason }) {
   return (
     <main className='grid gap-6'>
@@ -35,7 +32,7 @@ export default function HomeLanding({ onViewSeason }) {
             </div>
 
             <img
-              src={unknownTeamUrl}
+              src='/unknownTeam.png'
               alt='Unknown team mascot'
               className='hidden lg:block h-full max-h-[360px] w-full rounded-[1.5rem] object-cover shadow-xl ring-1 ring-gray-200'
             />
@@ -59,11 +56,11 @@ export default function HomeLanding({ onViewSeason }) {
             </p>
             <p className='text-white/85 leading-relaxed mt-4'>
               We’re asking our athletes to attend at least 1 practice per week,
-              and commit to attending the regattas. We aim to always announce
-              all regattas by December 31 of each prior year so that everyone
-              has plenty of time to plan ahead. It is our expectation that all
-              athletes book off these weekends ahead of time. And if things come
-              up, find a sub!
+              the training camp if applicable, and commit to attending the
+              regattas. We aim to always announce all regattas by December 31 of
+              each prior year so that everyone has plenty of time to plan ahead.
+              It is our expectation that all athletes book off these weekends
+              ahead of time. And if things come up, find a sub!
             </p>
           </div>
           <div className='bg-slate-950/35 backdrop-blur-md border border-white/30 rounded-2xl p-6 text-white shadow-xl'>
@@ -170,7 +167,8 @@ export default function HomeLanding({ onViewSeason }) {
               preload='metadata'
               aria-label='Dragon boat festival footage'
             >
-              <source src={hkFestBeforeUrl} type='video/mp4' />
+              <source src='/hkfestbefore.mp4' type='video/mp4' />
+              <source src='/hkfestbefore.mov' type='video/quicktime' />
             </video>
             <p>
               The first evidence of dragonboats dates back over 2500 years. The
