@@ -1,3 +1,5 @@
+const assetPath = (filename) => `${import.meta.env.BASE_URL}${filename}`;
+
 export default function HomeLanding({ onViewSeason }) {
   return (
     <main className='grid gap-6'>
@@ -32,7 +34,7 @@ export default function HomeLanding({ onViewSeason }) {
             </div>
 
             <img
-              src='/unknownTeam.png'
+              src={assetPath('unknownTeam.png')}
               alt='Unknown team mascot'
               className='hidden lg:block h-full max-h-[360px] w-full rounded-[1.5rem] object-cover shadow-xl ring-1 ring-gray-200'
             />
@@ -167,8 +169,8 @@ export default function HomeLanding({ onViewSeason }) {
               preload='metadata'
               aria-label='Dragon boat festival footage'
             >
-              <source src='/hkfestbefore.mp4' type='video/mp4' />
-              <source src='/hkfestbefore.mov' type='video/quicktime' />
+              <source src={assetPath('hkfestbefore.mp4')} type='video/mp4' />
+              <source src={assetPath('hkfestbefore.mov')} type='video/quicktime' />
             </video>
             <p>
               The first evidence of dragonboats dates back over 2500 years. The
