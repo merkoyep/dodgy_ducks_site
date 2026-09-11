@@ -96,13 +96,12 @@ export default function HomeLanding({ onViewSeason }) {
               impairments.
             </p>
             <p>
-              That being said, Dragonboat can be an intense workout! You have to
-              brace yourself using your legs, hinge and bury the blade deep into
-              the water using your hips and your core, pull the boat forward
-              using your triceps and lats, then sit up and punch the paddle back
-              forward using your back, core, and biceps. It’s cardio, strength,
-              and flexibility all wrapped up in an awesome, fun, and challenging
-              workout!
+              That being said, Dragonboat Is a full body workout. Quads, glutes,
+              triceps, lats, biceps, delts, and abdominals area all engaged in
+              this dynamic sport. It's also a cardio and endurance workout with
+              a wide range of race distances, from a 100m sprint, to a 2k
+              endurance piece. It’s cardio, strength, and flexibility all
+              wrapped up in an awesome, fun, and challenging workout!
             </p>
           </div>
         </article>
@@ -113,12 +112,13 @@ export default function HomeLanding({ onViewSeason }) {
           </div>
           <div className='space-y-4 text-gray-700 leading-relaxed'>
             <p>
-              First evidence of Dragonboats stems from over 2500 years with its
-              origins in the Pearl River Delta region of today’s southern China
-              (Guangzhou, Shenzhen, Hong Kong SAR, Macao SAR). Evidence points
-              to agricultural communities setting off in Dragonboats and beating
-              on drums during the summer solstice as a fertility rite to awaken
-              deities, praying for rain, and for a plentiful harvest.
+              The first evidence of dragonboats dates back over 2500 years. The
+              boats have their origins in the Pearl River Delta region of
+              today’s southern China (Guangzhou, Shenzhen, Hong Kong SAR, Macao
+              SAR). Evidence points to agricultural communities setting off in
+              Dragonboats and beating on drums during the summer solstice as a
+              fertility rite to awaken deities, praying for rain, and for a
+              plentiful harvest.
             </p>
             <p>
               The origins of the Tuen Ng festival (Dragon boat festival in June)
@@ -130,8 +130,10 @@ export default function HomeLanding({ onViewSeason }) {
               off bad spirits and stopping fish from eating his body. They also
               threw rice bundles (zhongzi) into the lake to feed the fish so
               they wouldn’t eat his remains. Since then, Tuen Ng festival has
-              become a national holiday in China, and is also widely celebrated
-              by the Chinese diaspora globally.
+              become a national holiday in China, where it is celebrated with
+              dragonboat races, feasts, and celebration of the summer solstice.
+              It is also widely celebrated by the Chinese diaspora globally,
+              such as right here in Canada!
             </p>
             <p>
               Canada played a huge role in transforming Dragonboat into a global
