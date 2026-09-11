@@ -23,7 +23,7 @@ function clearAttemptState() {
 
 function FullScreenPanel({ children }) {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-primary to-secondary p-5 flex items-center justify-center'>
+    <div className='min-h-screen p-5 flex items-center justify-center'>
       <div className='bg-white rounded-2xl shadow-2xl w-full max-w-md p-8'>
         {children}
       </div>

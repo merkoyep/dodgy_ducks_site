@@ -207,7 +207,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-white text-2xl font-semibold">Loading...</div>
       </div>
     );
@@ -215,7 +215,7 @@ function App() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4">
         <div className="bg-white rounded-xl p-8 max-w-md text-center">
           <div className="text-red-500 text-xl font-semibold mb-4">Error</div>
           <p className="text-gray-700">{error}</p>
@@ -609,7 +609,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary to-secondary p-5">
+    <div className="min-h-screen p-5">
       <div className="max-w-[1400px] mx-auto">
         <Header
           isEditMode={editingEnabled}

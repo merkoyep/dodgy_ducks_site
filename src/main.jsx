@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <PasscodeGate>
       <Suspense fallback={(
-        <div className='min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center'>
+        <div className='min-h-screen flex items-center justify-center'>
           <div className='text-white text-2xl font-semibold'>Loading...</div>
         </div>
       )}>

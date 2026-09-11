@@ -2,58 +2,105 @@ export default function HomeLanding({ onViewSeason }) {
   return (
     <main className='grid gap-6'>
       <section className='grid gap-6 lg:grid-cols-[1.15fr_0.85fr] items-stretch'>
-        <div className='bg-white/95 rounded-2xl p-8 md:p-10 shadow-2xl'>
-          <div className='text-sm font-bold uppercase tracking-[0.25em] text-primary mb-4'>
-            Dragonboat Team
+        <div className='bg-white/95 rounded-2xl p-8 md:p-10 shadow-2xl overflow-hidden'>
+          <div className='grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-center'>
+            <div>
+              <div className='text-sm font-bold uppercase tracking-[0.25em] text-primary mb-4'>
+                Dragonboat Team
+              </div>
+              <h2 className='text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5'>
+                Welcome to Name TBD Dragonboat!
+              </h2>
+              <p className='text-lg md:text-xl text-gray-700 leading-relaxed mb-6'>
+                We are (going to be) a recreational dragon boat team dedicated
+                to athletic development, social connection and friendship,
+                travel, and having fun!
+              </p>
+              <p className='text-gray-600 leading-relaxed mb-8'>
+                The Team seeks to improve over time and to race to the best of
+                its ability. Competitive results, however, shall not take
+                priority over inclusion, development, sportsmanship, member
+                well-being, or enjoyment of the sport.
+              </p>
+              <button
+                type='button'
+                onClick={onViewSeason}
+                className='bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold shadow-lg transition-all'
+              >
+                Compare season plans
+              </button>
+            </div>
+
+            <img
+              src='/unknownTeam.png'
+              alt='Unknown team mascot'
+              className='hidden lg:block h-full max-h-[360px] w-full rounded-[1.5rem] object-cover shadow-xl ring-1 ring-gray-200'
+            />
           </div>
-          <h2 className='text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5'>
-            Welcome to Name TBD Dragonboat!
-          </h2>
-          <p className='text-lg md:text-xl text-gray-700 leading-relaxed mb-6'>
-            We are (going to be) a recreational dragon boat team dedicated to
-            athletic development, social connection and friendship, travel, and
-            having fun!
-          </p>
-          <p className='text-gray-600 leading-relaxed mb-8'>
-            The Team seeks to improve over time and to race to the best of its
-            ability. Competitive results, however, shall not take priority over
-            inclusion, development, sportsmanship, member well-being, or
-            enjoyment of the sport.
-          </p>
-          <button
-            type='button'
-            onClick={onViewSeason}
-            className='bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold shadow-lg transition-all'
-          >
-            Compare season plans
-          </button>
         </div>
 
         <aside className='grid gap-5'>
-          <div className='bg-white/15 border border-white/25 rounded-2xl p-6 text-white shadow-xl'>
+          <div className='bg-slate-950/35 backdrop-blur-md border border-white/30 rounded-2xl p-6 text-white shadow-xl'>
             <h3 className='text-2xl font-bold mb-3'>Commitment</h3>
             <p className='text-white/85 leading-relaxed'>
-              We get it, life is kind of crazy! At the same time, Dragonboat is
-              a tournament based team sport, which means you always need
-              everyone from every team at the same place at the same time in
-              order for it to work.
+              We get it, life is kind of crazy, so things come up! Just always
+              give us a heads up because we have to balance boats, meet
+              rostering requirements, and we'd like to make sure you're not dead
+              in a ditch somewhere 😁.
+            </p>
+            <p>
+              The current proposed season plan is to have team dragonboat
+              practices 1x per week, and an optional outrigger canoe practice on
+              a drop-in basis. This way, we can keep mandatory costs low for
+              everyone, and provide small group coaching for those interested.
             </p>
             <p className='text-white/85 leading-relaxed mt-4'>
               We’re asking our athletes to attend at least 1 practice per week,
-              and commit to attending the regattas. We will announce all
-              regattas by December 31 of each prior year so it is our
-              expectation that all athletes book off these weekends ahead of
-              time.
+              and commit to attending the regattas. We aim to always announce
+              all regattas by December 31 of each prior year so that everyone
+              has plenty of time to plan ahead. It is our expectation that all
+              athletes book off these weekends ahead of time. And if things come
+              up, find a sub!
             </p>
           </div>
-          <div className='bg-white/15 border border-white/25 rounded-2xl p-6 text-white shadow-xl'>
+          <div className='bg-slate-950/35 backdrop-blur-md border border-white/30 rounded-2xl p-6 text-white shadow-xl'>
             <h3 className='text-2xl font-bold mb-3'>Practice Locations</h3>
             <p>(Plans are subject to change)</p>
             <br />
             <ul className='space-y-2 text-white/85 list-disc list-inside'>
-              <li>Dragonboat @ Sunnyside Paddling Club</li>
-              <li>Outrigger @ Sunnyside Paddling Club</li>
-              <li>Dryland @ Afterburn Fitness?</li>
+              <li>
+                Dragonboat @{' '}
+                <a
+                  href='https://maps.app.goo.gl/LCuz7q3Zhu38zz8G9'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='font-bold underline decoration-white/50 underline-offset-4 transition hover:text-white hover:decoration-white'
+                >
+                  Sunnyside Paddling Club
+                </a>
+              </li>
+              <li>
+                Outrigger @{' '}
+                <a
+                  href='https://maps.app.goo.gl/LCuz7q3Zhu38zz8G9'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='font-bold underline decoration-white/50 underline-offset-4 transition hover:text-white hover:decoration-white'
+                >
+                  Sunnyside Paddling Club
+                </a>
+              </li>
+              <li>
+                Dryland @{' '}
+                <a
+                  href='https://maps.app.goo.gl/BQkjumjqNcnr3qE39'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='font-bold underline decoration-white/50 underline-offset-4 transition hover:text-white hover:decoration-white'
+                >
+                  Afterburn Fitness?
+                </a>
+              </li>
             </ul>
           </div>
         </aside>
@@ -110,7 +157,19 @@ export default function HomeLanding({ onViewSeason }) {
           <div className='mb-4 inline-flex rounded-full bg-secondary/10 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-secondary'>
             History
           </div>
-          <div className='space-y-4 text-gray-700 leading-relaxed'>
+          <div className='text-gray-700 leading-relaxed'>
+            <video
+              className='mb-5 aspect-square w-full rounded-2xl object-cover shadow-xl ring-1 ring-gray-200 md:float-right md:ml-6 md:mb-4 md:w-1/2'
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload='metadata'
+              aria-label='Dragon boat festival footage'
+            >
+              <source src='/hkfestbefore.mp4' type='video/mp4' />
+              <source src='/hkfestbefore.mov' type='video/quicktime' />
+            </video>
             <p>
               The first evidence of dragonboats dates back over 2500 years. The
               boats have their origins in the Pearl River Delta region of
@@ -120,7 +179,7 @@ export default function HomeLanding({ onViewSeason }) {
               fertility rite to awaken deities, praying for rain, and for a
               plentiful harvest.
             </p>
-            <p>
+            <p className='mt-4'>
               The origins of the Tuen Ng festival (Dragon boat festival in June)
               follows the legend of Qu Yuan, who was a poet and minister of the
               State of Chu, during China’s warring states period. In 278BCE
@@ -135,7 +194,7 @@ export default function HomeLanding({ onViewSeason }) {
               It is also widely celebrated by the Chinese diaspora globally,
               such as right here in Canada!
             </p>
-            <p>
+            <p className='mt-4'>
               Canada played a huge role in transforming Dragonboat into a global
               competitive sport. Dragonboat first made its way to Canada in
               1986, during the World Expo in Vancouver, BC, where Hong Kong
