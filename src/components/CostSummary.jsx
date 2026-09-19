@@ -1,4 +1,4 @@
-export default function CostSummary({ option }) {
+export default function CostSummary({ option, isEditMode = false, onEditFlights = () => {} }) {
   const estimatedFlights = option.estimatedFlights || 'TBD';
   const destinationLabel = option.details || option.name || 'destination';
 
@@ -33,6 +33,15 @@ export default function CostSummary({ option }) {
           <div className="text-sm text-orange-700 mb-1">Estimated flights</div>
           <div className="text-2xl font-bold text-orange-700">{estimatedFlights}</div>
           <div className="text-xs text-orange-700/70 mt-1">Toronto → {destinationLabel}</div>
+          {isEditMode && (
+            <button
+              type="button"
+              onClick={onEditFlights}
+              className="mt-3 rounded-lg bg-orange-500 px-3 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-orange-600"
+            >
+              Edit flights
+            </button>
+          )}
         </div>
       </div>
     </div>

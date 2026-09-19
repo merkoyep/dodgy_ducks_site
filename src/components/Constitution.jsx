@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const constitutionArticles = [
   {
@@ -72,6 +72,7 @@ const constitutionArticles = [
         title: 'Feedback Without Blame',
         body: [
           'The Team encourages paddlers to learn how to understand the boat, recognize effective technique, and provide constructive peer feedback.',
+          'Members are expected to give one another constructive peer feedback where appropriate, in the spirit of shared learning and team improvement.',
           'Feedback must be focused on improvement rather than blame.',
           'Members must not belittle, berate, scapegoat, or personally attack another paddler for the performance of the boat.',
           'Ultimate technical direction remains the responsibility of the Coach.',
@@ -383,10 +384,22 @@ function renderBody(body) {
   });
 }
 
-export default function Constitution() {
+export default function Constitution({ activeArticleRoman = 'I', onArticleChange = () => {} }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeArticle = constitutionArticles[activeIndex];
   const progress = ((activeIndex + 1) / constitutionArticles.length) * 100;
+
+  useEffect(() => {
+    const nextIndex = constitutionArticles.findIndex((article) => (
+      article.roman.toLowerCase() === String(activeArticleRoman).toLowerCase()
+    ));
+    if (nextIndex !== -1) setActiveIndex(nextIndex);
+  }, [activeArticleRoman]);
+
+  const handleSelectArticle = (index) => {
+    setActiveIndex(index);
+    onArticleChange(constitutionArticles[index].roman);
+  };
 
   return (
     <main className='relative overflow-hidden rounded-[2rem] bg-white/95 p-5 shadow-2xl ring-1 ring-white/60 md:p-8'>
@@ -454,7 +467,7 @@ export default function Constitution() {
                   <button
                     key={article.roman}
                     type='button'
-                    onClick={() => setActiveIndex(index)}
+                    onClick={() => handleSelectArticle(index)}
                     className={`group rounded-2xl p-3 text-left transition-all duration-300 ${
                       isActive
                         ? 'bg-primary text-white shadow-lg shadow-primary/25 scale-[1.02]'

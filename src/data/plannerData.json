@@ -5,7 +5,7 @@
     "sourceSheetId": "1qv0NRdDo0dzK-E2BhnlhNZBfJOgqXBu8LbkN-2KYVCk",
     "pulledAt": "2026-09-03T02:18:31Z",
     "notes": "Production uses this local JSON file as read-only data. Local Vite development can update this file via the edit-mode save API.",
-    "updatedAt": "2026-09-10T20:17:37.688822Z"
+    "updatedAt": "2026-09-18T23:52:27.119Z"
   },
   "dataItems": [
     {
@@ -29,7 +29,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Sunnyside Paddling Fee",
@@ -52,7 +55,10 @@
       "San Diego": "TRUE",
       "Singapore": "TRUE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "TRUE",
+      "Victoria": "TRUE",
+      "Portland": "TRUE"
     },
     {
       "Item": "Sunnyside Membership",
@@ -75,7 +81,10 @@
       "San Diego": "TRUE",
       "Singapore": "TRUE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "TRUE",
+      "Victoria": "TRUE",
+      "Portland": "TRUE"
     },
     {
       "Item": "Training Camp",
@@ -98,7 +107,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Sunnyside Paddling Fee: Partner",
@@ -121,7 +133,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Afterburn",
@@ -144,7 +159,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Toronto Island Regatta",
@@ -167,7 +185,10 @@
       "San Diego": "TRUE",
       "Singapore": "TRUE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "TRUE",
+      "Victoria": "TRUE",
+      "Portland": "TRUE"
     },
     {
       "Item": "Hamilton Waterfest",
@@ -190,7 +211,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Concord Pacific Dragonboat Festival",
@@ -200,7 +224,7 @@
       "Dates": "6/26 6/27",
       "Notes": "Fee is for 1 standard boat, 2 split gendered boats",
       "Raw Price (CAD)": "1750.00",
-      "Math": "$1750.00 \u00d7 1 boat + 12%",
+      "Math": "$1750.00 × 1 boat + 12%",
       "Total Cost": "1960.00",
       "Cost PP (24ppl)": "$81.67",
       "Local": "FALSE",
@@ -213,7 +237,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Christie Lake",
@@ -236,7 +263,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "TRUE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Changwon International DBF",
@@ -259,7 +289,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Sunlife Hong Kong Dragonboat Festival",
@@ -282,7 +315,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Venice IDBF",
@@ -305,7 +341,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Pickfest",
@@ -328,7 +367,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Welland",
@@ -351,7 +393,10 @@
       "San Diego": "TRUE",
       "Singapore": "TRUE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "TRUE",
+      "Victoria": "FALSE",
+      "Portland": "TRUE"
     },
     {
       "Item": "Oddball Fall Classic",
@@ -374,7 +419,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "TRUE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "HKDBC New York",
@@ -397,7 +445,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Montreal International Dragon Boat Challenge",
@@ -420,7 +471,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Travel 3 Nights",
@@ -443,7 +497,10 @@
       "San Diego": "TRUE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "TRUE"
+      "Test MOFO PLan": "TRUE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "TRUE"
     },
     {
       "Item": "Travel 4 Nights",
@@ -466,7 +523,10 @@
       "San Diego": "FALSE",
       "Singapore": "TRUE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "San Diego International DBF - 500m",
@@ -476,7 +536,7 @@
       "Dates": "9/26",
       "Notes": "1x500 mixed Standard",
       "Raw Price (CAD)": "700.00",
-      "Math": "$700.00 \u00d7 1 boat + 13%",
+      "Math": "$700.00 × 1 boat + 13%",
       "Total Cost": "791.00",
       "Cost PP (24ppl)": "$32.96",
       "Local": "FALSE",
@@ -489,7 +549,10 @@
       "San Diego": "TRUE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "San Diego International DBF",
@@ -499,7 +562,7 @@
       "Dates": "9/25",
       "Notes": "https://www.sddbt.org/wp-content/uploads/2026/04/2026-SDDBT-Race-Registration-Form.pdf\n\n250m: 2xMixed",
       "Raw Price (CAD)": "1100.00",
-      "Math": "$550.00 \u00d7 2 boats",
+      "Math": "$550.00 × 2 boats",
       "Total Cost": "1100.00",
       "Cost PP (24ppl)": "$45.83",
       "Local": "FALSE",
@@ -512,7 +575,10 @@
       "San Diego": "TRUE",
       "Singapore": "FALSE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Singapore SGSea Regatta",
@@ -535,7 +601,10 @@
       "San Diego": "FALSE",
       "Singapore": "TRUE",
       "Busan": "FALSE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Busan Open International Dragon Boat Festival",
@@ -545,7 +614,7 @@
       "Dates": "8/27 8/28 8/29",
       "Notes": "Everything's posted literally April so WTF but here's the doc: https://www.jdba-dragonboat.com/media/1/2018Information%20Bulletin.pdf",
       "Raw Price (CAD)": "1440.00",
-      "Math": "$60.00 \u00d7 24 paddlers \u00d7 1 boat",
+      "Math": "$60.00 × 24 paddlers × 1 boat",
       "Total Cost": "1440.00",
       "Cost PP (24ppl)": "$60.00",
       "Local": "FALSE",
@@ -558,7 +627,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "Dragon Boat Canada Membership Fee",
@@ -568,7 +640,7 @@
       "Dates": "",
       "Notes": "",
       "Raw Price (CAD)": "",
-      "Math": "$35.00 \u00d7 24 paddlers",
+      "Math": "$35.00 × 24 paddlers",
       "Total Cost": "840.00",
       "Cost PP (24ppl)": "$35.00",
       "Local": "FALSE",
@@ -581,7 +653,10 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
     },
     {
       "Item": "GWN Sport Regatta",
@@ -591,7 +666,7 @@
       "Dates": "7/17",
       "Notes": "",
       "Raw Price (CAD)": "1300.00",
-      "Math": "$1300.00 \u00d7 1 boat + 13%",
+      "Math": "$1300.00 × 1 boat + 13%",
       "Total Cost": "1469.00",
       "Cost PP (24ppl)": "$61.21",
       "Local": "FALSE",
@@ -604,7 +679,88 @@
       "San Diego": "FALSE",
       "Singapore": "FALSE",
       "Busan": "TRUE",
-      "Test MOFO PLan": "FALSE"
+      "Test MOFO PLan": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Victoria": "FALSE",
+      "Portland": "FALSE"
+    },
+    {
+      "Item": "Travel 2 nights",
+      "Price": "$200.00 PP",
+      "Type": "Travel",
+      "Early Bird deadline": "",
+      "Dates": "",
+      "Notes": "",
+      "Raw Price (CAD)": "",
+      "Math": "$200.00 × 24 paddlers",
+      "Total Cost": "4800.00",
+      "Cost PP (24ppl)": "$200.00",
+      "Concord": "FALSE",
+      "Vancouver Oddball Fall Classic": "TRUE",
+      "Hong Kong": "FALSE",
+      "Singapore": "FALSE",
+      "Busan": "FALSE",
+      "New York": "FALSE",
+      "Montreal": "FALSE",
+      "Local": "FALSE",
+      "Korea": "FALSE",
+      "San Diego": "FALSE",
+      "Italy": "FALSE",
+      "Test MOFO PLan": "FALSE",
+      "Victoria": "TRUE",
+      "Portland": "FALSE"
+    },
+    {
+      "Item": "Canada Dry Victoria DBF",
+      "Price": "$1550.00/boat",
+      "Type": "Regatta",
+      "Early Bird deadline": "5/31",
+      "Dates": "8/7",
+      "Notes": "",
+      "Raw Price (CAD)": "1550.00",
+      "Math": "$1550.00 × 1 boat + 12%",
+      "Total Cost": "1736.00",
+      "Cost PP (24ppl)": "$72.33",
+      "Concord": "FALSE",
+      "Hong Kong": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "Singapore": "FALSE",
+      "Busan": "FALSE",
+      "New York": "FALSE",
+      "Montreal": "FALSE",
+      "Local": "FALSE",
+      "Korea": "FALSE",
+      "San Diego": "FALSE",
+      "Italy": "FALSE",
+      "Test MOFO PLan": "FALSE",
+      "Victoria": "TRUE",
+      "Portland": "FALSE"
+    },
+    {
+      "Item": "Portland Rose DBF",
+      "Price": "$1600.00/boat",
+      "Type": "Regatta",
+      "Early Bird deadline": "Aug 1",
+      "Dates": "9/11 - 9/12",
+      "Notes": "",
+      "Raw Price (CAD)": "1600.00",
+      "Math": "$1600.00 × 1 boat",
+      "Total Cost": "1600.00",
+      "Cost PP (24ppl)": "$66.67",
+      "Concord": "FALSE",
+      "Victoria": "FALSE",
+      "Vancouver Oddball Fall Classic": "FALSE",
+      "New York": "FALSE",
+      "Montreal": "FALSE",
+      "Singapore": "FALSE",
+      "Busan": "FALSE",
+      "Hong Kong": "FALSE",
+      "Local": "FALSE",
+      "Korea": "FALSE",
+      "San Diego": "FALSE",
+      "Italy": "FALSE",
+      "Test MOFO PLan": "FALSE",
+      "Portland": "TRUE"
     }
   ],
   "totalsData": [
@@ -625,48 +781,40 @@
       "Note": ""
     },
     {
-      "Option": "E",
-      "Details": "Hong Kong",
-      "Total Team cost": "$18,218.63",
-      "PP Cost (24)": "$752.50",
-      "Outrigger $22/session x 10": "$220.00",
-      "Total PP": "$972.50",
-      "Installment 1: Regatta Fees": "$139.37",
-      "Installment 2: Practice Fees": "$313.13",
-      "Installment 3: Travel Fees": "$300.00",
-      "Jerseys": "",
-      "Optional: Outrigger": "",
-      "Estimated: Flights": "$1,500.00",
-      "PlanKey": "Hong Kong",
-      "Note": ""
-    },
-    {
-      "Option": "Singapore",
-      "Details": "Singapore - SGSea",
-      "Total Team cost": "N/A",
-      "PP Cost (24)": "N/A",
-      "Outrigger $22/session x 10": "",
-      "Total PP": "",
-      "Installment 1: Regatta Fees": "0",
-      "Installment 2: Practice Fees": "0",
-      "Installment 3: Travel Fees": "$0.00",
-      "Jerseys": "",
-      "Optional: Outrigger": "",
-      "Estimated: Flights": "$1,700.00",
-      "PlanKey": "Singapore",
-      "Note": ""
-    },
-    {
-      "Option": "Busan",
-      "Details": "Busan Open International DBF",
+      "Option": "Victoria",
+      "PlanKey": "Victoria",
+      "Details": "Victoria",
       "Total Team cost": "$0.00",
       "PP Cost (24)": "$0.00",
+      "Estimated: Flights": "",
+      "Note": "250m Sprint Regatta",
       "Installment 1: Regatta Fees": "$0.00",
       "Installment 2: Practice Fees": "$0.00",
-      "Installment 3: Travel Fees": "$0.00",
-      "PlanKey": "Busan",
+      "Installment 3: Travel Fees": "$0.00"
+    },
+    {
+      "Option": "Vancouver Oddball Fall Classic",
+      "PlanKey": "Vancouver Oddball Fall Classic",
+      "Details": "Vancouver Oddball",
+      "Total Team cost": "$0.00",
+      "PP Cost (24)": "$0.00",
+      "Estimated: Flights": "",
+      "Note": "Oddball Fall Classic: 3 x 200m + 1 x 2000m",
+      "Installment 1: Regatta Fees": "$0.00",
+      "Installment 2: Practice Fees": "$0.00",
+      "Installment 3: Travel Fees": "$0.00"
+    },
+    {
+      "Option": "Portland",
+      "PlanKey": "Portland",
+      "Details": "Portland",
+      "Total Team cost": "$0.00",
+      "PP Cost (24)": "$0.00",
+      "Estimated: Flights": "",
       "Note": "",
-      "Estimated: Flights": "$1,500.00"
+      "Installment 1: Regatta Fees": "$0.00",
+      "Installment 2: Practice Fees": "$0.00",
+      "Installment 3: Travel Fees": "$0.00"
     },
     {
       "Option": "F",
@@ -698,38 +846,6 @@
       "Optional: Outrigger": "",
       "Estimated: Flights": "",
       "PlanKey": "Montreal",
-      "Note": ""
-    },
-    {
-      "Option": "A",
-      "Details": "Local Only",
-      "Total Team cost": "$17,258.13",
-      "PP Cost (24)": "$712.48",
-      "Outrigger $22/session x 10": "$220.00",
-      "Total PP": "$932.48",
-      "Installment 1: Regatta Fees": "$177.03",
-      "Installment 2: Practice Fees": "$235.44",
-      "Installment 3: Travel Fees": "$300.00",
-      "Jerseys": "~$50/Jersey",
-      "Optional: Outrigger": "$22/drop-in. Max ~ 15 sessions",
-      "Estimated: Flights": "$0.00",
-      "PlanKey": "Local",
-      "Note": ""
-    },
-    {
-      "Option": "D",
-      "Details": "Korea Changwon",
-      "Total Team cost": "$21,749.20",
-      "PP Cost (24)": "$899.61",
-      "Outrigger $22/session x 10": "$220.00",
-      "Total PP": "$1,119.61",
-      "Installment 1: Regatta Fees": "$364.16",
-      "Installment 2: Practice Fees": "$235.44",
-      "Installment 3: Travel Fees": "$300.00",
-      "Jerseys": "",
-      "Optional: Outrigger": "",
-      "Estimated: Flights": "$1,500.00",
-      "PlanKey": "Korea",
       "Note": ""
     },
     {
@@ -765,6 +881,82 @@
       "Note": ""
     },
     {
+      "Option": "Singapore",
+      "Details": "Singapore - SGSea",
+      "Total Team cost": "N/A",
+      "PP Cost (24)": "N/A",
+      "Outrigger $22/session x 10": "",
+      "Total PP": "",
+      "Installment 1: Regatta Fees": "0",
+      "Installment 2: Practice Fees": "0",
+      "Installment 3: Travel Fees": "$0.00",
+      "Jerseys": "",
+      "Optional: Outrigger": "",
+      "Estimated: Flights": "$1,700.00",
+      "PlanKey": "Singapore",
+      "Note": ""
+    },
+    {
+      "Option": "Busan",
+      "Details": "Busan Open International DBF",
+      "Total Team cost": "$0.00",
+      "PP Cost (24)": "$0.00",
+      "Installment 1: Regatta Fees": "$0.00",
+      "Installment 2: Practice Fees": "$0.00",
+      "Installment 3: Travel Fees": "$0.00",
+      "PlanKey": "Busan",
+      "Note": "",
+      "Estimated: Flights": "$1,500.00"
+    },
+    {
+      "Option": "E",
+      "Details": "Hong Kong",
+      "Total Team cost": "$18,218.63",
+      "PP Cost (24)": "$752.50",
+      "Outrigger $22/session x 10": "$220.00",
+      "Total PP": "$972.50",
+      "Installment 1: Regatta Fees": "$139.37",
+      "Installment 2: Practice Fees": "$313.13",
+      "Installment 3: Travel Fees": "$300.00",
+      "Jerseys": "",
+      "Optional: Outrigger": "",
+      "Estimated: Flights": "$1,500.00",
+      "PlanKey": "Hong Kong",
+      "Note": ""
+    },
+    {
+      "Option": "A",
+      "Details": "Local Only",
+      "Total Team cost": "$17,258.13",
+      "PP Cost (24)": "$712.48",
+      "Outrigger $22/session x 10": "$220.00",
+      "Total PP": "$932.48",
+      "Installment 1: Regatta Fees": "$177.03",
+      "Installment 2: Practice Fees": "$235.44",
+      "Installment 3: Travel Fees": "$300.00",
+      "Jerseys": "~$50/Jersey",
+      "Optional: Outrigger": "$22/drop-in. Max ~ 15 sessions",
+      "Estimated: Flights": "$0.00",
+      "PlanKey": "Local",
+      "Note": ""
+    },
+    {
+      "Option": "D",
+      "Details": "Korea Changwon",
+      "Total Team cost": "$21,749.20",
+      "PP Cost (24)": "$899.61",
+      "Outrigger $22/session x 10": "$220.00",
+      "Total PP": "$1,119.61",
+      "Installment 1: Regatta Fees": "$364.16",
+      "Installment 2: Practice Fees": "$235.44",
+      "Installment 3: Travel Fees": "$300.00",
+      "Jerseys": "",
+      "Optional: Outrigger": "",
+      "Estimated: Flights": "$1,500.00",
+      "PlanKey": "Korea",
+      "Note": ""
+    },
+    {
       "Option": "Test MOFO PLan",
       "Details": "Test MOFO PLan",
       "Total Team cost": "$0.00",
@@ -773,7 +965,8 @@
       "Installment 2: Practice Fees": "$0.00",
       "Installment 3: Travel Fees": "$0.00",
       "PlanKey": "Test MOFO PLan",
-      "Note": ""
+      "Note": "",
+      "Estimated: Flights": ""
     }
   ],
   "calendarRows": [
@@ -1686,6 +1879,86 @@
       "EventName": "Outrigger Practice",
       "Type": "Practice",
       "Option": "Italy",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "9-12",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Vancouver Oddball Fall Classic",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "9-19",
+      "EventName": "Outrigger Practice",
+      "Type": "Practice",
+      "Option": "Vancouver Oddball Fall Classic",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "9-12",
+      "EventName": "Training Camp",
+      "Type": "Practice",
+      "Option": "Vancouver Oddball Fall Classic",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "7-25",
+      "EventName": "Outrigger Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "7-25",
+      "EventName": "Training Camp",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "9-5",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Portland",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "8-22",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Portland",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "8-22",
+      "EventName": "Training Camp",
+      "Type": "Practice",
+      "Option": "Portland",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "9-5",
+      "EventName": "Outrigger Practice",
+      "Type": "Practice",
+      "Option": "Portland",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "4-29",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Portland",
       "Source": "manual",
       "Notes": "Added via app"
     }

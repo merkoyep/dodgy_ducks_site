@@ -11,6 +11,7 @@ import Constitution from './components/Constitution';
 import TeamName from './components/TeamName';
 import SeasonNoteModal from './components/SeasonNoteModal';
 import SeasonTitleModal from './components/SeasonTitleModal';
+import SeasonFlightsModal from './components/SeasonFlightsModal';
 import AddItemsModal from './components/AddItemsModal';
 import EditRegattaModal from './components/EditRegattaModal';
 import NewRegattaModal from './components/NewRegattaModal';
@@ -49,6 +50,7 @@ function dedupePendingChanges(changes) {
     else if (change.action === 'deleteSeasonPlan') key = `plan:delete:${change.optionName}`;
     else if (change.action === 'updateSeasonNote') key = `plan:note:${change.optionName}`;
     else if (change.action === 'updateSeasonTitle') key = `plan:title:${change.optionName}`;
+    else if (change.action === 'updateEstimatedFlights') key = `plan:flights:${change.optionName}`;
     else if (change.action === 'updateSeasonOrder') key = 'plan:order';
     else key = `toggle:${change.item}:${change.option}`;
     latestByKey.set(key, change);
@@ -123,6 +125,30 @@ function formatPracticeScheduleLabel(dates = [], practiceName = '') {
   return `${countLabel}: ${dates.join(', ')}`;
 }
 
+function decodeHashValue(value = '') {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+function parseHashRoute(hash = '') {
+  const raw = hash.replace(/^#/, '');
+  const separatorIndex = raw.indexOf(':');
+  if (separatorIndex === -1) return { page: raw, value: '' };
+
+  return {
+    page: raw.slice(0, separatorIndex),
+    value: decodeHashValue(raw.slice(separatorIndex + 1)),
+  };
+}
+
+function updateHashRoute(route) {
+  if (!route || window.location.hash === `#${route}`) return;
+  window.location.hash = route;
+}
+
 function App() {
   const [dataItems, setDataItems] = useState([]);
   const [calendarRows, setCalendarRows] = useState([]);
@@ -143,7 +169,9 @@ function App() {
   const [isAddPlanOpen, setIsAddPlanOpen] = useState(false);
   const [isSeasonNoteOpen, setIsSeasonNoteOpen] = useState(false);
   const [isSeasonTitleOpen, setIsSeasonTitleOpen] = useState(false);
+  const [isSeasonFlightsOpen, setIsSeasonFlightsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
+  const [constitutionArticle, setConstitutionArticle] = useState('I');
   const canEdit = import.meta.env.DEV;
   
   // Modal state
@@ -157,6 +185,42 @@ function App() {
   useEffect(() => {
     loadData();
   }, []);
+
+  useEffect(() => {
+    if (isLoading) return undefined;
+
+    const applyHashRoute = () => {
+      const { page, value } = parseHashRoute(window.location.hash);
+      if (!page) return;
+
+      if (page === 'home' || page === 'overview' || page === 'team-name') {
+        setActiveTab(page);
+        return;
+      }
+
+      if (page === 'constitution') {
+        setActiveTab('constitution');
+        setConstitutionArticle(value || 'I');
+        return;
+      }
+
+      if (page === 'season') {
+        const requestedOption = value || selectedOption || options[0]?.id;
+        const matchingOption = options.find((option) => option.id === requestedOption);
+
+        if (matchingOption) {
+          setSelectedOption(matchingOption.id);
+          setActiveTab('season');
+        } else {
+          setActiveTab('overview');
+        }
+      }
+    };
+
+    applyHashRoute();
+    window.addEventListener('hashchange', applyHashRoute);
+    return () => window.removeEventListener('hashchange', applyHashRoute);
+  }, [isLoading, options, selectedOption]);
 
   // Update calendar events when option or calendar rows change
   useEffect(() => {
@@ -278,6 +342,27 @@ function App() {
   const allRegattas = dataItems
     .filter((item) => item.Type === 'Regatta')
     .sort((a, b) => getItemDateValue(a) - getItemDateValue(b) || a.Item.localeCompare(b.Item));
+
+  const handleNavigateTab = (tab) => {
+    setActiveTab(tab);
+    if (tab === 'constitution') {
+      setConstitutionArticle('I');
+      updateHashRoute('constitution');
+      return;
+    }
+    updateHashRoute(tab);
+  };
+
+  const handleNavigateSeason = (optionId) => {
+    setSelectedOption(optionId);
+    setActiveTab('season');
+    updateHashRoute(`season:${encodeURIComponent(optionId)}`);
+  };
+
+  const handleNavigateConstitutionArticle = (roman) => {
+    setConstitutionArticle(roman);
+    updateHashRoute(`constitution:${encodeURIComponent(roman)}`);
+  };
 
   const handleToggleEdit = () => {
     if (!canEdit) {
@@ -486,11 +571,14 @@ function App() {
     }));
     setCalendarRows((prev) => prev.filter((row) => row.Option !== selectedOption));
     setSelectedOption(fallbackOption);
+    if (fallbackOption) updateHashRoute(`season:${encodeURIComponent(fallbackOption)}`);
+    else handleNavigateTab('overview');
     setPendingChanges((prev) => {
       const filtered = prev.filter((change) => {
         if (change.action === 'updateItem' && change.option === selectedOption) return false;
         if (change.action === 'addSeasonPlan' && change.optionName === selectedOption) return false;
         if (change.action === 'deleteSeasonPlan' && change.optionName === selectedOption) return false;
+        if (change.action === 'updateEstimatedFlights' && change.optionName === selectedOption) return false;
         if (change.action === 'addRegatta' && change.item?.option === selectedOption) return false;
         if (change.action === 'addTravelItem' && change.item?.option === selectedOption) return false;
         if (change.action === 'calendarEventDelta' && change.option === selectedOption) return false;
@@ -547,6 +635,19 @@ function App() {
     setIsSeasonTitleOpen(false);
   };
 
+  const handleSaveEstimatedFlights = (estimatedFlights) => {
+    if (!currentOption) return;
+
+    setOptions((prev) => prev.map((option) => (
+      option.id === currentOption.id ? { ...option, estimatedFlights } : option
+    )));
+    setPendingChanges((prev) => dedupePendingChanges([
+      ...prev,
+      { action: 'updateEstimatedFlights', optionName: currentOption.id, estimatedFlights }
+    ]));
+    setIsSeasonFlightsOpen(false);
+  };
+
   const handleAddSeasonPlan = ({ name, details, copyFrom }) => {
     const normalizedName = name.trim();
     const normalizedDetails = (details || name).trim();
@@ -575,6 +676,8 @@ function App() {
 
     setOptions((prev) => [...prev, newOption]);
     setSelectedOption(normalizedName);
+    setActiveTab('season');
+    updateHashRoute(`season:${encodeURIComponent(normalizedName)}`);
     setPendingChanges((prev) => dedupePendingChanges([
       ...prev,
       { action: 'addSeasonPlan', optionName: normalizedName, details: normalizedDetails, copyFrom }
@@ -616,15 +719,18 @@ function App() {
           onToggleEdit={handleToggleEdit}
           canEdit={canEdit}
           activeTab={activeView}
-          onTabChange={setActiveTab}
+          onTabChange={handleNavigateTab}
         />
 
         {activeView === 'home' ? (
-          <HomeLanding onViewSeason={() => setActiveTab('overview')} />
+          <HomeLanding onViewSeason={() => handleNavigateTab('overview')} />
         ) : activeView === 'team-name' ? (
           <TeamName />
         ) : activeView === 'constitution' ? (
-          <Constitution />
+          <Constitution
+            activeArticleRoman={constitutionArticle}
+            onArticleChange={handleNavigateConstitutionArticle}
+          />
         ) : activeView === 'overview' ? (
           <>
             <SeasonPlansOverview
@@ -635,10 +741,7 @@ function App() {
               isEditMode={editingEnabled}
               onOpenAddPlan={() => setIsAddPlanOpen(true)}
               onReorderPlans={handleReorderSeasonPlans}
-              onOpenPlan={(optionId) => {
-                setSelectedOption(optionId);
-                setActiveTab('season');
-              }}
+              onOpenPlan={handleNavigateSeason}
             />
 
             <AddPlanModal
@@ -656,7 +759,7 @@ function App() {
               teamSize={teamSize}
               onTeamSizeChange={setTeamSize}
               isEditMode={editingEnabled}
-              onBack={() => setActiveTab('overview')}
+              onBack={() => handleNavigateTab('overview')}
               onOpenAddPlan={() => setIsAddPlanOpen(true)}
               onDeletePlan={handleDeleteSeasonPlan}
               onEditTitle={() => setIsSeasonTitleOpen(true)}
@@ -668,7 +771,11 @@ function App() {
               onEdit={() => setIsSeasonNoteOpen(true)}
             />
 
-            <CostSummary option={calculatedSummary} />
+            <CostSummary
+              option={calculatedSummary}
+              isEditMode={editingEnabled}
+              onEditFlights={() => setIsSeasonFlightsOpen(true)}
+            />
 
             <div className="grid gap-5 mb-10 lg:grid-cols-3">
               <ItemSection
@@ -848,6 +955,13 @@ function App() {
               option={currentOption}
               onClose={() => setIsSeasonTitleOpen(false)}
               onSave={handleSaveSeasonTitle}
+            />
+
+            <SeasonFlightsModal
+              isOpen={isSeasonFlightsOpen}
+              option={currentOption}
+              onClose={() => setIsSeasonFlightsOpen(false)}
+              onSave={handleSaveEstimatedFlights}
             />
 
             <AddPlanModal
