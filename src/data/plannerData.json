@@ -5,7 +5,7 @@
     "sourceSheetId": "1qv0NRdDo0dzK-E2BhnlhNZBfJOgqXBu8LbkN-2KYVCk",
     "pulledAt": "2026-09-03T02:18:31Z",
     "notes": "Production uses this local JSON file as read-only data. Local Vite development can update this file via the edit-mode save API.",
-    "updatedAt": "2026-09-18T23:52:27.119Z"
+    "updatedAt": "2026-09-19T00:33:07.411Z"
   },
   "dataItems": [
     {
@@ -786,7 +786,7 @@
       "Details": "Victoria",
       "Total Team cost": "$0.00",
       "PP Cost (24)": "$0.00",
-      "Estimated: Flights": "",
+      "Estimated: Flights": "$500.00",
       "Note": "250m Sprint Regatta",
       "Installment 1: Regatta Fees": "$0.00",
       "Installment 2: Practice Fees": "$0.00",
@@ -798,7 +798,7 @@
       "Details": "Vancouver Oddball",
       "Total Team cost": "$0.00",
       "PP Cost (24)": "$0.00",
-      "Estimated: Flights": "",
+      "Estimated: Flights": "$500.00",
       "Note": "Oddball Fall Classic: 3 x 200m + 1 x 2000m",
       "Installment 1: Regatta Fees": "$0.00",
       "Installment 2: Practice Fees": "$0.00",
@@ -810,7 +810,7 @@
       "Details": "Portland",
       "Total Team cost": "$0.00",
       "PP Cost (24)": "$0.00",
-      "Estimated: Flights": "",
+      "Estimated: Flights": "$550.00",
       "Note": "",
       "Installment 1: Regatta Fees": "$0.00",
       "Installment 2: Practice Fees": "$0.00",
