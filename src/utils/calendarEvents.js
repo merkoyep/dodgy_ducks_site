@@ -105,7 +105,7 @@ export function seededStaticRows() {
   return [
     ['1-1', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 1'],
     ['4-15', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 2'],
-    ['6-1', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 3'],
+    ['6-15', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 3'],
     ['1-1', "New Year’s Day", 'Holiday', 'ALL', 'generated', 'Ontario Holiday'],
     ['2-15', 'Family Day', 'Holiday', 'ALL', 'generated', 'Ontario Holiday'],
     ['4-2', 'Good Friday', 'Holiday', 'ALL', 'generated', 'Ontario Holiday'],
@@ -121,12 +121,12 @@ export function generateSeedCalendarRowsForOption(optionId, optionItems) {
   const rows = [];
   const lastRegattaValue = getLastRegattaValue(optionItems);
 
-  const allDbPracticeThursdays = [
-    ['5-6', 506], ['5-13', 513], ['5-20', 520], ['5-27', 527],
-    ['6-3', 603], ['6-10', 610], ['6-17', 617], ['6-24', 624],
-    ['7-8', 708], ['7-15', 715], ['7-22', 722], ['7-29', 729],
-    ['8-5', 805], ['8-12', 812], ['8-19', 819], ['8-26', 826],
-    ['9-2', 902], ['9-9', 909], ['9-16', 916], ['9-23', 923], ['9-30', 930],
+  const allDbPracticeWednesdays = [
+    ['5-5', 505], ['5-12', 512], ['5-19', 519], ['5-26', 526],
+    ['6-2', 602], ['6-9', 609], ['6-16', 616], ['6-23', 623], ['6-30', 630],
+    ['7-7', 707], ['7-14', 714], ['7-21', 721], ['7-28', 728],
+    ['8-4', 804], ['8-11', 811], ['8-18', 818], ['8-25', 825],
+    ['9-1', 901], ['9-8', 908], ['9-15', 915], ['9-22', 922], ['9-29', 929],
   ];
 
   const allOutriggerSundays = [
@@ -164,12 +164,12 @@ export function generateSeedCalendarRowsForOption(optionId, optionItems) {
     });
 
   const practicesAfterLastRegatta = lastRegattaValue
-    ? allDbPracticeThursdays.filter(([, value]) => value > lastRegattaValue).length
+    ? allDbPracticeWednesdays.filter(([, value]) => value > lastRegattaValue).length
     : 0;
 
-  allDbPracticeThursdays.forEach(([key, value]) => {
+  allDbPracticeWednesdays.forEach(([key, value]) => {
     if (lastRegattaValue && value > lastRegattaValue) return;
-    push(rows, [key, 'Dragonboat Practice', 'Practice', optionId, 'generated', 'Dragonboat Practice @ Sunnyside']);
+    push(rows, [key, 'Dragonboat Practice', 'Practice', optionId, 'generated', 'Wednesdays 7:15pm–8:45pm @ Sunnyside']);
   });
 
   const replaceableSundays = allOutriggerSundays.filter(([, value]) => !lastRegattaValue || value < lastRegattaValue);

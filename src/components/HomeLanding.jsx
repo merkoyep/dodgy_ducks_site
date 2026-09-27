@@ -1,7 +1,7 @@
 import hkFestBeforeUrl from '../assets/hkfestbefore.mp4';
 import unknownTeamUrl from '../assets/unknownTeam.png';
 
-export default function HomeLanding({ onViewSeason }) {
+export default function HomeLanding({ onViewSeason, seasonButtonLabel = 'View season schedule' }) {
   return (
     <main className='grid gap-6'>
       <section className='grid gap-6 lg:grid-cols-[1.15fr_0.85fr] items-stretch'>
@@ -30,7 +30,7 @@ export default function HomeLanding({ onViewSeason }) {
                 onClick={onViewSeason}
                 className='bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold shadow-lg transition-all'
               >
-                Compare season plans
+                {seasonButtonLabel}
               </button>
             </div>
 
@@ -93,17 +93,7 @@ export default function HomeLanding({ onViewSeason }) {
                   Sunnyside Paddling Club
                 </a>
               </li>
-              <li>
-                Dryland @{' '}
-                <a
-                  href='https://maps.app.goo.gl/BQkjumjqNcnr3qE39'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='font-bold underline decoration-white/50 underline-offset-4 transition hover:text-white hover:decoration-white'
-                >
-                  Afterburn Fitness?
-                </a>
-              </li>
+
             </ul>
           </div>
         </aside>

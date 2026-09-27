@@ -2,12 +2,16 @@ export default function Header({
   isEditMode,
   onToggleEdit,
   canEdit = false,
+  showPlannerPages = false,
   activeTab = 'home',
   onTabChange = () => {},
 }) {
   const tabs = [
     { id: 'home', label: 'Home' },
-    { id: 'overview', label: 'Season Plans' },
+    { id: 'season-schedule', label: 'Season Schedule' },
+    { id: 'practices', label: 'Practices' },
+    { id: 'team-fees', label: 'Team Fees' },
+    ...(showPlannerPages ? [{ id: 'overview', label: 'Season Plans' }] : []),
     { id: 'constitution', label: 'Constitution' },
   ];
 

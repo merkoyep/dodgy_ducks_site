@@ -5,7 +5,7 @@
     "sourceSheetId": "1qv0NRdDo0dzK-E2BhnlhNZBfJOgqXBu8LbkN-2KYVCk",
     "pulledAt": "2026-09-03T02:18:31Z",
     "notes": "Production uses this local JSON file as read-only data. Local Vite development can update this file via the edit-mode save API.",
-    "updatedAt": "2026-09-19T00:33:07.411Z"
+    "updatedAt": "2026-09-27T00:07:47.409Z"
   },
   "dataItems": [
     {
@@ -166,15 +166,15 @@
     },
     {
       "Item": "Toronto Island Regatta",
-      "Price": "$1,650",
+      "Price": "$1,750",
       "Type": "Regatta",
       "Early Bird deadline": "",
       "Dates": "6/12 6/13",
       "Notes": "",
-      "Raw Price (CAD)": "$1,650",
-      "Math": "$1,650",
-      "Total Cost": "1864.5",
-      "Cost PP (24ppl)": "$77.69",
+      "Raw Price (CAD)": "$1,750",
+      "Math": "$1,750",
+      "Total Cost": "1977.50",
+      "Cost PP (24ppl)": "$82.40",
       "Local": "TRUE",
       "Concord": "FALSE",
       "Korea": "FALSE",
@@ -1959,6 +1959,198 @@
       "EventName": "Dragonboat Practice",
       "Type": "Practice",
       "Option": "Portland",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "9-5",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "9-12",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "9-12",
+      "EventName": "Outrigger Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "9-5",
+      "EventName": "Outrigger Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "manual",
+      "Notes": "Added via app"
+    },
+    {
+      "Date": "9-16",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "9-9",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "9-2",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "8-26",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "8-19",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "8-12",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "8-5",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "7-8",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "7-15",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "7-22",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "7-29",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "6-3",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "6-10",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "6-17",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "6-24",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "5-6",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "5-13",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "5-20",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "5-27",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
+      "Source": "removed",
+      "Notes": "Removed via app"
+    },
+    {
+      "Date": "4-28",
+      "EventName": "Dragonboat Practice",
+      "Type": "Practice",
+      "Option": "Victoria",
       "Source": "manual",
       "Notes": "Added via app"
     }

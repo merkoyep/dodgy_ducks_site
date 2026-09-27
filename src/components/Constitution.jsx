@@ -422,9 +422,6 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
           <h2 className='text-4xl font-black leading-tight drop-shadow md:text-6xl'>
             Built for paddling hard, welcoming loudly, and having fun.
           </h2>
-          <p className='mt-5 max-w-2xl text-lg leading-8 text-white/85'>
-            Choose an article to open a polished slide through the rules, culture, leadership, finances, safety standards, and spirit of the team.
-          </p>
         </div>
 
         <div className='mt-8 grid gap-3 sm:grid-cols-4'>

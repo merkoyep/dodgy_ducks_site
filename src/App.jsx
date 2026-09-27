@@ -6,6 +6,9 @@ import CostSummary from './components/CostSummary';
 import ItemSection from './components/ItemSection';
 import Calendar from './components/Calendar';
 import SeasonPlansOverview from './components/SeasonPlansOverview';
+import SeasonSchedule from './components/SeasonSchedule';
+import PracticesPage from './components/PracticesPage';
+import TeamFees from './components/TeamFees';
 import SeasonNotePanel from './components/SeasonNotePanel';
 import Constitution from './components/Constitution';
 import TeamName from './components/TeamName';
@@ -149,7 +152,12 @@ function updateHashRoute(route) {
   window.location.hash = route;
 }
 
+const VICTORIA_PLAN_ID = 'Victoria';
+const PUBLIC_VICTORIA_TABS = ['season-schedule', 'practices', 'team-fees'];
+
 function App() {
+  const showPlannerPages = import.meta.env.DEV;
+  const canEdit = import.meta.env.DEV;
   const [dataItems, setDataItems] = useState([]);
   const [calendarRows, setCalendarRows] = useState([]);
   const [options, setOptions] = useState([]);
@@ -172,7 +180,6 @@ function App() {
   const [isSeasonFlightsOpen, setIsSeasonFlightsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const [constitutionArticle, setConstitutionArticle] = useState('I');
-  const canEdit = import.meta.env.DEV;
   
   // Modal state
   const [addModalState, setAddModalState] = useState({
@@ -193,8 +200,21 @@ function App() {
       const { page, value } = parseHashRoute(window.location.hash);
       if (!page) return;
 
-      if (page === 'home' || page === 'overview' || page === 'team-name') {
+      if (page === 'home' || page === 'team-name' || PUBLIC_VICTORIA_TABS.includes(page)) {
+        if (PUBLIC_VICTORIA_TABS.includes(page) && options.some((option) => option.id === VICTORIA_PLAN_ID)) {
+          setSelectedOption(VICTORIA_PLAN_ID);
+        }
         setActiveTab(page);
+        return;
+      }
+
+      if (page === 'overview') {
+        if (showPlannerPages) {
+          setActiveTab('overview');
+        } else {
+          setActiveTab('season-schedule');
+          updateHashRoute('season-schedule');
+        }
         return;
       }
 
@@ -205,6 +225,13 @@ function App() {
       }
 
       if (page === 'season') {
+        if (!showPlannerPages) {
+          if (options.some((option) => option.id === VICTORIA_PLAN_ID)) setSelectedOption(VICTORIA_PLAN_ID);
+          setActiveTab('season-schedule');
+          updateHashRoute('season-schedule');
+          return;
+        }
+
         const requestedOption = value || selectedOption || options[0]?.id;
         const matchingOption = options.find((option) => option.id === requestedOption);
 
@@ -220,7 +247,7 @@ function App() {
     applyHashRoute();
     window.addEventListener('hashchange', applyHashRoute);
     return () => window.removeEventListener('hashchange', applyHashRoute);
-  }, [isLoading, options, selectedOption]);
+  }, [isLoading, options, selectedOption, showPlannerPages]);
 
   // Update calendar events when option or calendar rows change
   useEffect(() => {
@@ -249,7 +276,7 @@ function App() {
       if (processedOptions.length > 0) {
         const hasSelectedOption = processedOptions.some((option) => option.id === selectedOption);
         if (!selectedOption || !hasSelectedOption) {
-          setSelectedOption(processedOptions[0].id);
+          setSelectedOption(processedOptions.find((option) => option.id === VICTORIA_PLAN_ID)?.id || processedOptions[0].id);
         }
       }
       
@@ -264,10 +291,11 @@ function App() {
     }
   }
 
-  const currentOption = options.find(o => o.id === selectedOption) || options[0];
+  const currentOption = options.find(o => o.id === selectedOption) || options.find((option) => option.id === VICTORIA_PLAN_ID) || options[0];
   const effectiveTeamSize = parseInt(teamSize, 10) || 1;
   const editingEnabled = canEdit && isEditMode;
-  const activeView = currentOption || ['home', 'team-name', 'constitution'].includes(activeTab) ? activeTab : 'home';
+  const validStaticTabs = ['home', 'team-name', 'constitution', ...PUBLIC_VICTORIA_TABS];
+  const activeView = currentOption || validStaticTabs.includes(activeTab) ? activeTab : 'home';
 
   if (isLoading) {
     return (
@@ -344,13 +372,19 @@ function App() {
     .sort((a, b) => getItemDateValue(a) - getItemDateValue(b) || a.Item.localeCompare(b.Item));
 
   const handleNavigateTab = (tab) => {
-    setActiveTab(tab);
-    if (tab === 'constitution') {
+    const nextTab = tab === 'overview' && !showPlannerPages ? 'season-schedule' : tab;
+
+    if (PUBLIC_VICTORIA_TABS.includes(nextTab) && options.some((option) => option.id === VICTORIA_PLAN_ID)) {
+      setSelectedOption(VICTORIA_PLAN_ID);
+    }
+
+    setActiveTab(nextTab);
+    if (nextTab === 'constitution') {
       setConstitutionArticle('I');
       updateHashRoute('constitution');
       return;
     }
-    updateHashRoute(tab);
+    updateHashRoute(nextTab);
   };
 
   const handleNavigateSeason = (optionId) => {
@@ -714,16 +748,29 @@ function App() {
   return (
     <div className="min-h-screen p-5">
       <div className="max-w-[1400px] mx-auto">
+        <a
+          href="https://forms.gle/6gFayVFv9PNGFAk8A"
+          target="_blank"
+          rel="noreferrer"
+          className="mb-5 block rounded-2xl border border-white/30 bg-white/95 px-6 py-4 text-center text-lg font-extrabold text-primary shadow-2xl transition hover:-translate-y-0.5 hover:bg-white"
+        >
+          Interested? Express your interest in joining the team here!
+        </a>
+
         <Header
           isEditMode={editingEnabled}
           onToggleEdit={handleToggleEdit}
           canEdit={canEdit}
+          showPlannerPages={showPlannerPages}
           activeTab={activeView}
           onTabChange={handleNavigateTab}
         />
 
         {activeView === 'home' ? (
-          <HomeLanding onViewSeason={() => handleNavigateTab('overview')} />
+          <HomeLanding
+            onViewSeason={() => handleNavigateTab(showPlannerPages ? 'overview' : 'season-schedule')}
+            seasonButtonLabel={showPlannerPages ? 'Compare season plans' : 'See 2027 season plan'}
+          />
         ) : activeView === 'team-name' ? (
           <TeamName />
         ) : activeView === 'constitution' ? (
@@ -731,7 +778,22 @@ function App() {
             activeArticleRoman={constitutionArticle}
             onArticleChange={handleNavigateConstitutionArticle}
           />
-        ) : activeView === 'overview' ? (
+        ) : activeView === 'season-schedule' ? (
+          <SeasonSchedule
+            events={calendarEvents}
+            regattas={regattas}
+            seasonNote={calculatedSummary.note}
+          />
+        ) : activeView === 'practices' ? (
+          <PracticesPage />
+        ) : activeView === 'team-fees' ? (
+          <TeamFees
+            option={calculatedSummary}
+            regattas={regattas}
+            practices={practices}
+            travelItems={other}
+          />
+        ) : activeView === 'overview' && showPlannerPages ? (
           <>
             <SeasonPlansOverview
               summaries={seasonSummaries}
