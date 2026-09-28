@@ -30,7 +30,7 @@ describe('calendar events', () => {
 
   it('keeps all static seed rows available to the app', () => {
     const staticRows = convertSeedRowsToObjects(seededStaticRows());
-    expect(staticRows[0]).toMatchObject({ Date: '1-1', EventName: 'Fees Due', Type: 'FeesDue' });
+    expect(staticRows[0]).toMatchObject({ Date: '3-1', EventName: 'Fees Due', Type: 'FeesDue' });
   });
 
   it('generates calendar rows from selected plan items', () => {

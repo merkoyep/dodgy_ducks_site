@@ -44,16 +44,6 @@ npm run data:pull
 npm test
 ```
 
-## Production passcode
-
-Local `npm run dev` bypasses the passcode. Production builds require a passcode hash and fail closed if it is missing. Because GitHub Pages is static hosting, this is not a replacement for server-side/host-level authentication for sensitive data.
-
-```bash
-npm run auth:hash
-```
-
-Add the printed `VITE_SITE_PASSCODE_*` values as GitHub Actions repository secrets before deploying.
-
 ## Build for production
 
 ```bash
@@ -61,7 +51,7 @@ npm run build
 npm run preview
 ```
 
-Production builds are passcode-gated and read-only.
+Production builds are public and read-only.
 
 ## Features
 

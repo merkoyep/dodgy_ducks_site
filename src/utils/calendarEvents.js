@@ -103,8 +103,8 @@ function push(rows, row) {
 
 export function seededStaticRows() {
   return [
-    ['1-1', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 1'],
-    ['4-15', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 2'],
+    ['3-1', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 1'],
+    ['5-1', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 2'],
     ['6-15', 'Fees Due', 'FeesDue', 'ALL', 'generated', 'Installment 3'],
     ['1-1', "New Year’s Day", 'Holiday', 'ALL', 'generated', 'Ontario Holiday'],
     ['2-15', 'Family Day', 'Holiday', 'ALL', 'generated', 'Ontario Holiday'],

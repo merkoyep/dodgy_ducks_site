@@ -1,6 +1,11 @@
 import Calendar from './Calendar';
 import { formatDate } from '../utils/calendarEvents';
 
+function getRegattaDateLabel(item) {
+  if (/canada dry victoria dbf/i.test(item.Item)) return 'Mid August - Date TBD';
+  return formatDate(item.Dates);
+}
+
 function getRegattaDetail(item, seasonNote) {
   if (/victoria/i.test(item.Item)) {
     return seasonNote || 'Travel regatta selected by the team vote.';
@@ -55,7 +60,7 @@ export default function SeasonSchedule({ events, regattas, seasonNote }) {
                   </div>
                   {item.Dates && (
                     <div className="shrink-0 rounded-full bg-red-100 px-4 py-2 text-sm font-black text-red-700">
-                      {formatDate(item.Dates)}
+                      {getRegattaDateLabel(item)}
                     </div>
                   )}
                 </div>

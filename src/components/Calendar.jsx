@@ -9,14 +9,16 @@ const PRACTICE_TOOLS = [
   { name: 'Afterburn', label: 'Add Afterburn' },
 ];
 
+const DISPLAYED_MONTH_INDEXES = [3, 4, 5, 6, 7, 8];
+
 export default function Calendar({ 
   events, 
   isEditMode,
   onAddCustomPractice,
   onRemoveCustomPractice
 }) {
-  const [currentMonth, setCurrentMonth] = useState(4); // May
-  const [activeMonths, setActiveMonths] = useState([]);
+  const [currentMonth, setCurrentMonth] = useState(3); // April
+  const [activeMonths, setActiveMonths] = useState(DISPLAYED_MONTH_INDEXES);
   const [activeTool, setActiveTool] = useState(null);
   const isInitialized = useRef(false);
 
@@ -25,34 +27,11 @@ export default function Calendar({
   }, [isEditMode]);
 
   useEffect(() => {
-    // Find months with events
-    const active = [];
-    for (let m = 0; m <= 10; m++) {
-      const monthNum = m + 1;
-      let hasEvents = false;
-      
-      for (let day = 1; day <= 31; day++) {
-        const key = `${monthNum}-${day}`;
-        if (events[key] && events[key].length > 0) {
-          hasEvents = true;
-          break;
-        }
-      }
-      
-      if (hasEvents) {
-        active.push(m);
-      }
-    }
-    
-    setActiveMonths(active);
-    
+    setActiveMonths(DISPLAYED_MONTH_INDEXES);
+
     // Only set initial month on first load, not on every event change
     if (!isInitialized.current) {
-      if (active.includes(4)) {
-        setCurrentMonth(4);
-      } else if (active.length > 0) {
-        setCurrentMonth(active[0]);
-      }
+      setCurrentMonth(DISPLAYED_MONTH_INDEXES[0]);
       isInitialized.current = true;
     }
   }, [events]);

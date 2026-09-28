@@ -8,11 +8,11 @@ export default function Header({
 }) {
   const tabs = [
     { id: 'home', label: 'Home' },
+    { id: 'constitution', label: 'Constitution' },
     { id: 'season-schedule', label: 'Season Schedule' },
     { id: 'practices', label: 'Practices' },
     { id: 'team-fees', label: 'Team Fees' },
     ...(showPlannerPages ? [{ id: 'overview', label: 'Season Plans' }] : []),
-    { id: 'constitution', label: 'Constitution' },
   ];
 
   return (

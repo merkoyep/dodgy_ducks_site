@@ -35,10 +35,6 @@ jobs:
 
       - name: Build static app
         run: npm run build
-        env:
-          VITE_SITE_PASSCODE_HASH: ${{ secrets.VITE_SITE_PASSCODE_HASH }}
-          VITE_SITE_PASSCODE_SALT: ${{ secrets.VITE_SITE_PASSCODE_SALT }}
-          VITE_SITE_PASSCODE_ITERATIONS: ${{ secrets.VITE_SITE_PASSCODE_ITERATIONS }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

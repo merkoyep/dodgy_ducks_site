@@ -1,6 +1,6 @@
 const installments = [
-  { label: 'Installment 1', due: 'Jan 1', key: 'regatta' },
-  { label: 'Installment 2', due: 'April 15', key: 'practice' },
+  { label: 'Installment 1', due: 'March 1', key: 'regatta' },
+  { label: 'Installment 2', due: 'May 1', key: 'practice' },
   { label: 'Installment 3', due: 'June 15', key: 'travel' },
 ];
 
@@ -90,17 +90,12 @@ function FeeList({ title, items, emptyText }) {
   );
 }
 
-export default function TeamFees({ option, regattas, practices, travelItems }) {
-  const practiceFeeItems = buildPracticeFeeItems(practices);
+export default function TeamFees({ option }) {
   const roundedInstallments = buildRoundedInstallments(option);
-  const additionalCostItems = buildAdditionalCostItems(travelItems, roundedInstallments.incidentals);
 
   return (
     <main className="grid gap-6">
       <section className="bg-white/95 rounded-2xl p-8 shadow-2xl ring-1 ring-white/60">
-        <div className="mb-3 inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-primary">
-          Victoria Season
-        </div>
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
             <h1 className="text-4xl font-extrabold text-gray-900">Team Fees</h1>
@@ -126,29 +121,6 @@ export default function TeamFees({ option, regattas, practices, travelItems }) {
         ))}
       </section>
 
-      <section className="bg-slate-950/45 backdrop-blur-md border border-white/30 rounded-2xl p-6 text-white shadow-2xl">
-        <h2 className="text-2xl font-extrabold mb-4">Practice fee details</h2>
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-xl bg-white/10 p-4">
-            <div className="text-sm text-white/70">Scheduled dragonboat practices</div>
-            <div className="mt-1 text-2xl font-extrabold">{option.practiceCount}</div>
-          </div>
-          <div className="rounded-xl bg-white/10 p-4">
-            <div className="text-sm text-white/70">Sunnyside rate</div>
-            <div className="mt-1 text-2xl font-extrabold">${option.practiceRate?.toFixed(2) || 'TBD'}/practice</div>
-          </div>
-          <div className="rounded-xl bg-white/10 p-4">
-            <div className="text-sm text-white/70">Optional OC drop-ins</div>
-            <div className="mt-1 text-sm font-semibold leading-relaxed">Booked and paid individually through Sunnyside; not included in team fees.</div>
-          </div>
-        </div>
-      </section>
-
-      <section className="grid gap-6 xl:grid-cols-3">
-        <FeeList title="Regatta fees" items={regattas} emptyText="No regatta fees listed." />
-        <FeeList title="Practice fees" items={practiceFeeItems} emptyText="No practice fees listed." />
-        <FeeList title="Additional costs" items={additionalCostItems} emptyText="No additional costs listed." />
-      </section>
     </main>
   );
 }
