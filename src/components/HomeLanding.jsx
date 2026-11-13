@@ -13,16 +13,10 @@ export default function HomeLanding({ onViewSeason, seasonButtonLabel = 'View se
               <h2 className='font-display font-normal tracking-wide text-4xl md:text-5xl text-gray-900 leading-tight mb-5'>
                 Welcome to the Dodgy Ducks!
               </h2>
-              <p className='text-lg md:text-xl text-gray-700 leading-relaxed mb-6'>
+              <p className='text-lg md:text-xl text-gray-700 leading-relaxed mb-8'>
                 The Dodgy Ducks are a recreational dragon boat team based in
                 Toronto, dedicated to athletic development, social connection
                 and friendship, travel, and having fun!
-              </p>
-              <p className='text-gray-600 leading-relaxed mb-8'>
-                The Team seeks to improve over time and to race to the best of
-                its ability. Competitive results, however, shall not take
-                priority over inclusion, development, sportsmanship, member
-                well-being, or enjoyment of the sport.
               </p>
               <button
                 type='button'
