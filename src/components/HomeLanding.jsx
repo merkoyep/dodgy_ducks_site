@@ -44,7 +44,7 @@ export default function HomeLanding({ onViewSeason, seasonButtonLabel = 'View se
               rostering requirements, and we'd like to make sure you're not dead
               in a ditch somewhere 😁.
             </p>
-            <p>
+            <p className='text-white/85 leading-relaxed mt-4'>
               The current proposed season plan is to have team dragonboat
               practices 1x per week, and an optional outrigger canoe practice on
               a drop-in basis. This way, we can keep mandatory costs low for
@@ -58,36 +58,6 @@ export default function HomeLanding({ onViewSeason, seasonButtonLabel = 'View se
               It is our expectation that all athletes book off these weekends
               ahead of time. And if things come up, find a sub!
             </p>
-          </div>
-          <div className='bg-slate-950/35 backdrop-blur-md border border-white/30 rounded-2xl p-6 text-white shadow-xl'>
-            <h3 className='text-2xl font-bold mb-3'>Practice Locations</h3>
-            <p>(Plans are subject to change)</p>
-            <br />
-            <ul className='space-y-2 text-white/85 list-disc list-inside'>
-              <li>
-                Dragonboat @{' '}
-                <a
-                  href='https://maps.app.goo.gl/LCuz7q3Zhu38zz8G9'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='font-bold underline decoration-white/50 underline-offset-4 transition hover:text-white hover:decoration-white'
-                >
-                  Sunnyside Paddling Club
-                </a>
-              </li>
-              <li>
-                Outrigger @{' '}
-                <a
-                  href='https://maps.app.goo.gl/LCuz7q3Zhu38zz8G9'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='font-bold underline decoration-white/50 underline-offset-4 transition hover:text-white hover:decoration-white'
-                >
-                  Sunnyside Paddling Club
-                </a>
-              </li>
-
-            </ul>
           </div>
         </aside>
       </section>
