@@ -32,12 +32,6 @@ npm run dev
 
 Then click **Enable Editing**, make changes, and click **Save Changes**. The dev server writes the updated snapshot to `src/data/plannerData.json`. Commit that file before deploying.
 
-To refresh the local JSON once from the original Google Sheet snapshot source:
-
-```bash
-npm run data:pull
-```
-
 ## Tests
 
 ```bash

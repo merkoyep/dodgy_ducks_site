@@ -5,11 +5,11 @@
 1. Push this app to a GitHub repository.
 2. In GitHub, go to **Settings → Pages**.
 3. Set **Build and deployment → Source** to **GitHub Actions**.
-4. Ensure your default branch is `main`, or edit `.github/workflows/deploy.yml` to match your branch.
+4. The workflow deploys from `master`. If your default branch is different, edit `.github/workflows/deploy.yml` to match.
 
 ## Deploy
 
-Every push to `main` runs the GitHub Pages workflow at the repository root (`.github/workflows/deploy.yml`):
+Every push to `master` runs the GitHub Pages workflow at the repository root (`.github/workflows/deploy.yml`):
 
 1. `npm ci`
 2. `npm test`
@@ -38,7 +38,7 @@ npm run dev
    ```bash
    git add src/data/plannerData.json
    git commit -m "Update planner data"
-   git push origin main
+   git push origin master
    ```
 
 GitHub Pages will then serve the updated data as a static read-only app.

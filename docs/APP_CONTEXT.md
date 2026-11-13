@@ -14,7 +14,7 @@ The planner is now a static, GitHub Pages-friendly React app. Production reads f
 
 Generated calendar events remain in `src/utils/calendarEvents.js`, so the committed JSON only stores the data that needs to be edited or preserved.
 
-To refresh the JSON once from the original sheet, run `npm run data:pull`. Ongoing edits should normally happen through local edit mode so they are saved directly to `src/data/plannerData.json`.
+Edits should happen through local edit mode so they are saved directly to `src/data/plannerData.json`.
 
 ## Runtime modes
 
