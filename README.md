@@ -70,7 +70,8 @@ Production builds are public and read-only.
 Logos live in `src/assets/brand/`, resized for the web from the team asset folder (`~/Documents/Dodgy Ducks`). The artwork itself is unedited:
 
 - `dodgy-ducks-badge.webp` — round badge, 512×512 (header, constitution)
-- `dodgy-ducks-icon.png` — round badge, 192×192 (favicon, apple-touch-icon)
+- `dodgy-ducks-icon.png` — round badge cropped to the circle with a transparent background, 192×192 (favicon)
+- `dodgy-ducks-apple-touch.png` — round badge on brand navy, 180×180 (iOS home-screen icon; iOS fills transparency with black)
 - `dodgy-ducks-logo.webp` — full-colour rectangular logo, 1600×800 (home, team name page)
 - `dodgy-ducks-wordmark-pattern.png` — transparent wordmark, 840×420 (faint background pattern)
 
