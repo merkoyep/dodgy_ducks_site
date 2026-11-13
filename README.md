@@ -1,6 +1,6 @@
-# Marco's Hostile Takeover Scheme 🐉
+# Dodgy Ducks 🦆 — Dragon Boat Season Planner
 
-Dragonboat Team Season Planner - React + Tailwind Edition.
+Season planner and public site for the Dodgy Ducks, a recreational dragon boat team in Toronto. React + Tailwind.
 
 ## Setup
 
@@ -65,10 +65,25 @@ Production builds are public and read-only.
 - ✅ GitHub Pages deployment workflow
 - ✅ Unit tests for calendar, cost calculation, local data processing, and production header behavior
 
+## Branding
+
+Logos live in `src/assets/brand/`, resized for the web from the team asset folder (`~/Documents/Dodgy Ducks`). The artwork itself is unedited:
+
+- `dodgy-ducks-badge.webp` — round badge, 512×512 (header, constitution)
+- `dodgy-ducks-icon.png` — round badge, 192×192 (favicon, apple-touch-icon)
+- `dodgy-ducks-logo.webp` — full-colour rectangular logo, 1600×800 (home, team name page)
+- `dodgy-ducks-wordmark-pattern.png` — transparent wordmark, 840×420 (faint background pattern)
+
+To regenerate from new source files, resize the originals to these dimensions (WebP quality ~88).
+
+Theme colours are defined in `tailwind.config.js` (`primary` duck blue, `secondary` navy, `accent` duck yellow, `splash`, `ink`). Big headings use the `font-display` family (Permanent Marker, loaded from Google Fonts in `index.html`); body text uses the system font stack.
+
 ## Project structure
 
 ```text
 src/
+├── assets/
+│   └── brand/
 ├── components/
 ├── data/
 │   └── plannerData.json

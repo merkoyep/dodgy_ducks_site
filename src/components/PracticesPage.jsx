@@ -13,7 +13,7 @@ export default function PracticesPage() {
         <div className="mb-3 inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-primary">
           Training Plan
         </div>
-        <h1 className="text-4xl font-extrabold text-gray-900">Practices</h1>
+        <h1 className="font-display font-normal tracking-wide text-4xl text-gray-900">Practices</h1>
         <p className="mt-3 max-w-3xl text-gray-700 leading-relaxed">
           The Victoria season uses one weekly dragonboat practice as the core team session, with optional outrigger canoe drop-ins for extra technique and small-group coaching.
         </p>

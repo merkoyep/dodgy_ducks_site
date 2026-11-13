@@ -752,9 +752,9 @@ function App() {
           href="https://forms.gle/6gFayVFv9PNGFAk8A"
           target="_blank"
           rel="noreferrer"
-          className="mb-5 block rounded-2xl border border-white/30 bg-white/95 px-6 py-4 text-center text-lg font-extrabold text-primary shadow-2xl transition hover:-translate-y-0.5 hover:bg-white"
+          className="mb-5 block rounded-2xl border border-ink/10 bg-accent px-6 py-4 text-center text-lg font-extrabold text-ink shadow-2xl transition hover:-translate-y-0.5 hover:bg-accent/90"
         >
-          Interested? Express your interest in joining the team here!
+          Interested? Express your interest in joining the Dodgy Ducks here! 🦆
         </a>
 
         <Header

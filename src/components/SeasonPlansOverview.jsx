@@ -44,7 +44,7 @@ export default function SeasonPlansOverview({
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="text-sm font-bold uppercase tracking-[0.25em] text-primary mb-3">Season Plans</div>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Compare the season options</h2>
+            <h2 className="font-display font-normal tracking-wide text-4xl text-gray-900 mb-3">Compare the season options</h2>
             <p className="text-gray-600 max-w-3xl leading-relaxed">
               A high-level cross-section for admins to compare cost, regattas, practices, and travel at a glance.
               Click any plan to open the detailed season view.

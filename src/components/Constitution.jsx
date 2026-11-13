@@ -1,25 +1,26 @@
 import { useEffect, useState } from 'react';
+import badgeUrl from '../assets/brand/dodgy-ducks-badge.webp';
 
 const constitutionArticles = [
   {
     roman: 'I',
     title: 'Name and Purpose',
     vibe: 'Who we are and why the boat exists.',
-    emoji: '🐉',
-    accent: 'from-cyan-400 to-blue-500',
+    emoji: '🦆',
+    accent: 'from-primary to-splash text-white',
     sections: [
       {
         number: 1,
         title: 'Name',
         body: [
-          'The name of the team shall be determined by the founding membership and thereafter may be changed in accordance with this Constitution.',
+          'The name of the team shall be the Dodgy Ducks. The name may be changed in accordance with this Constitution.',
         ],
       },
       {
         number: 2,
         title: 'Purpose',
         body: [
-          '[Team Name] (“the Team”) is a recreational and social dragon boat team dedicated to:',
+          'The Dodgy Ducks (“the Team”) is a recreational and social dragon boat team dedicated to:',
           ['athletic development;', 'social connection and friendship;', 'shared experiences and travel; and', 'above all, having fun.'],
           'The Team seeks to improve over time and to race to the best of its ability. Competitive results, however, shall not take priority over inclusion, development, sportsmanship, member well-being, or enjoyment of the sport.',
           'The Team is not intended to operate as an elite or high-performance racing program.',
@@ -32,7 +33,7 @@ const constitutionArticles = [
     title: 'Values and Team Culture',
     vibe: 'Inclusion, development, constructive feedback, no blame.',
     emoji: '✨',
-    accent: 'from-fuchsia-400 to-pink-500',
+    accent: 'from-accent to-yellow-300 text-ink',
     sections: [
       {
         number: 3,
@@ -85,7 +86,7 @@ const constitutionArticles = [
     title: 'Membership',
     vibe: 'Joining, rejoining, team fit, and good standing.',
     emoji: '🤝',
-    accent: 'from-emerald-300 to-teal-500',
+    accent: 'from-secondary to-primary text-white',
     sections: [
       { number: 7, title: 'Eligibility', body: ['Membership may be offered by application, invitation, trial practice, or another recruitment process established by the Executive.', 'Attendance at a trial practice does not guarantee an offer of membership.'] },
       {
@@ -152,7 +153,7 @@ const constitutionArticles = [
     title: 'Participation and Attendance',
     vibe: 'Show up, communicate, and make space for real life.',
     emoji: '📆',
-    accent: 'from-amber-300 to-orange-500',
+    accent: 'from-splash to-cyan-200 text-ink',
     sections: [
       {
         number: 12,
@@ -181,7 +182,7 @@ const constitutionArticles = [
     title: 'Regattas and Rostering',
     vibe: 'How we choose races and build crews.',
     emoji: '🚣',
-    accent: 'from-sky-300 to-indigo-500',
+    accent: 'from-primary to-splash text-white',
     sections: [
       { number: 14, title: 'Core Regattas', body: ['The Team shall normally designate core regattas for the upcoming season.', 'During the founding season, these regattas shall be selected by the membership.', 'In subsequent seasons, local core regattas may be selected by the Executive.'] },
       { number: 15, title: 'Travel Regatta', body: ['The Team may designate an additional travel or international regatta.', 'Participation in a travel regatta is optional in recognition of financial limitations, work obligations, vacation availability, immigration or travel requirements, and other personal circumstances.', 'The travel regatta shall be selected by a vote of the membership at the AGM.'] },
@@ -215,7 +216,7 @@ const constitutionArticles = [
     title: 'Leadership',
     vibe: 'The Executive, Captain, and Coach lanes.',
     emoji: '🧭',
-    accent: 'from-violet-300 to-purple-600',
+    accent: 'from-accent to-yellow-300 text-ink',
     sections: [
       {
         number: 20,
@@ -232,7 +233,7 @@ const constitutionArticles = [
     title: 'Executive Portfolios',
     vibe: 'The glorious portfolio titles and what each owns.',
     emoji: '🎛️',
-    accent: 'from-rose-300 to-red-500',
+    accent: 'from-secondary to-primary text-white',
     sections: [
       { number: 24, title: 'Coach Capt.', body: ['Responsibilities include:', ['Attendance', 'practice programming and technical coaching;', 'race and practice rostering;', 'seat assignments and crew configuration;', 'attendance management as it relates to training;', 'athletic and paddler development;', 'technical standards;', 'Team leadership.']] },
       { number: 25, title: 'Chief Officer of FUN', body: ['Responsibilities include:', ['training camp programming;', 'Team sports days;', 'FUNdraising;', 'social activities; and', 'restaurant and social reservations.']] },
@@ -247,7 +248,7 @@ const constitutionArticles = [
     title: 'Executive Decision-Making',
     vibe: 'Portfolio authority, review, quorum, conflicts.',
     emoji: '⚖️',
-    accent: 'from-lime-300 to-green-500',
+    accent: 'from-splash to-cyan-200 text-ink',
     sections: [
       { number: 30, title: 'Portfolio Authority', body: ['A Lead has ordinary decision-making authority within their assigned portfolio where the decision:', ['is consistent with this Constitution;', 'complies with Team policies;', 'falls within the approved budget; and', "does not materially affect another Lead's portfolio."], 'Leads should consult one another where responsibilities overlap.'] },
       { number: 31, title: 'Executive Review', body: ['A portfolio decision may be reviewed or overturned by a majority of the Executive.', 'This does not apply to matters reserved exclusively to the Coach under Article VI.'] },
@@ -260,7 +261,7 @@ const constitutionArticles = [
     title: 'Elections and Meetings',
     vibe: 'AGM, elections, terms, quorum, special meetings.',
     emoji: '🗳️',
-    accent: 'from-yellow-300 to-amber-500',
+    accent: 'from-primary to-splash text-white',
     sections: [
       { number: 34, title: 'Annual General Meeting', body: ['The Team shall hold an Annual General Meeting (“AGM”) annually, normally in connection with the Team\'s Halloween gathering.'] },
       { number: 35, title: 'Elections', body: ['All members in good standing may vote.', 'Candidates shall declare the specific Executive portfolio for which they are seeking election.', 'Executive positions shall be elected individually.', 'Voting may be conducted digitally. Where elections are conducted in connection with the AGM:', ['voting shall close during the AGM; and', 'results shall be announced during the AGM.']] },
@@ -276,7 +277,7 @@ const constitutionArticles = [
     title: 'Finances',
     vibe: 'Budgets, fees, refunds, accessibility, reserves.',
     emoji: '💸',
-    accent: 'from-teal-300 to-emerald-500',
+    accent: 'from-accent to-yellow-300 text-ink',
     sections: [
       { number: 41, title: 'Annual Budget', body: ['The Executive shall prepare an annual Team budget.', "The Team's initial budget and Team fees shall be approved by the founding membership.", 'Thereafter, the annual budget and required Team fees shall be presented to the membership at the AGM.'] },
       { number: 42, title: 'Spending Authority', body: ['Routine spending contained within an approved budget may be made by the appropriate Lead without separate membership approval.', 'Material expenditures outside the approved budget require Executive approval.'] },
@@ -292,7 +293,7 @@ const constitutionArticles = [
     title: 'Conduct and Safety',
     vibe: 'Expected conduct and what happens beyond formal activities.',
     emoji: '🛟',
-    accent: 'from-red-300 to-pink-500',
+    accent: 'from-secondary to-primary text-white',
     sections: [
       { number: 48, title: 'Standard of Conduct', body: ['Members are expected to behave in a manner consistent with the Team\'s values at practices, races, social events, travel activities, online spaces associated with the Team, and other circumstances materially connected to the Team.', 'Prohibited conduct includes, but is not limited to:', ['harassment;', 'discrimination;', 'sexual harassment or sexual misconduct;', 'misogynistic, racist, homophobic, transphobic, or otherwise discriminatory comments or behaviour;', 'bullying or intimidation;', 'threats or violence;', 'retaliation;', 'repeated personal attacks or scapegoating;', 'serious unsportsmanlike conduct;', 'deliberate creation of an unsafe environment; and', "other conduct fundamentally incompatible with the Team's values."]] },
       { number: 49, title: 'Conduct Outside Team Activities', body: ['The Executive may consider conduct occurring outside official Team activities where that conduct reasonably affects:', ['the safety of members or prospective members;', "another person's willingness or ability to participate;", 'trust within the Team;', "the Team's ability to provide an inclusive environment; or", "the Team's reputation in circumstances materially connected to the dragon boat community."], "This provision is not intended to give the Team general authority over members' private lives."] },
@@ -303,7 +304,7 @@ const constitutionArticles = [
     title: 'Complaints and Discipline',
     vibe: 'How concerns are reported, protected, and resolved.',
     emoji: '📣',
-    accent: 'from-blue-300 to-cyan-500',
+    accent: 'from-splash to-cyan-200 text-ink',
     sections: [
       { number: 51, title: 'Reporting Concerns', body: ['A member may raise a concern with any member of the Executive.', 'The Team should also maintain an anonymous reporting mechanism where reasonably practicable.', 'Members are not required to report concerns through a Lead with whom they are uncomfortable speaking.'] },
       { number: 52, title: 'Confidentiality', body: ['Complaints and reports shall be handled as confidentially as reasonably possible.', 'Absolute confidentiality cannot be guaranteed where disclosure is necessary to investigate a concern, protect members, or respond fairly.', "Anonymous reports may be considered, although anonymity may limit the Executive's ability to investigate or take disciplinary action."] },
@@ -320,7 +321,7 @@ const constitutionArticles = [
     title: 'Team Policies',
     vibe: 'Operational policies sit beneath the Constitution.',
     emoji: '📌',
-    accent: 'from-indigo-300 to-blue-600',
+    accent: 'from-primary to-splash text-white',
     sections: [
       { number: 59, title: 'Policies', body: ['The Executive may establish and amend operational policies without amending this Constitution.', 'Policies may address matters including:', ['registration deadlines;', 'reimbursements;', 'travel procedures;', 'race-day logistics;', 'uniforms and merchandise;', 'attendance systems;', 'communications;', 'social media;', 'safety procedures;', 'financial processes; and', 'other operational matters.'], 'Policies must be consistent with this Constitution.', 'Where a policy conflicts with this Constitution, the Constitution prevails.'] },
     ],
@@ -330,7 +331,7 @@ const constitutionArticles = [
     title: 'Amendments',
     vibe: 'How the document changes.',
     emoji: '📝',
-    accent: 'from-purple-300 to-fuchsia-500',
+    accent: 'from-accent to-yellow-300 text-ink',
     sections: [
       { number: 60, title: 'Proposing Amendments', body: ['Any member in good standing may propose an amendment to this Constitution.', 'Members shall receive reasonable notice of a proposed amendment before the vote.'] },
       { number: 61, title: 'Approval', body: ['Amendments require:', ['quorum of at least 50% of members in good standing; and', 'approval by at least two-thirds of votes cast.'], 'Amendments may be considered at an AGM or Special General Meeting.'] },
@@ -341,7 +342,7 @@ const constitutionArticles = [
     title: 'Dissolution',
     vibe: 'If the team winds down, assets support sport and inclusion.',
     emoji: '🌱',
-    accent: 'from-green-300 to-lime-500',
+    accent: 'from-secondary to-primary text-white',
     sections: [
       { number: 62, title: 'Dissolution of the Team', body: ['The Team may be dissolved by a two-thirds vote of members participating at a duly constituted membership meeting.', 'After all outstanding liabilities have been paid, any remaining Team assets shall not be distributed among individual members.', 'The membership shall vote to donate remaining assets to a charity or nonprofit organization whose work supports inclusion, accessibility, or participation in sport.'] },
     ],
@@ -350,8 +351,8 @@ const constitutionArticles = [
     roman: 'XVI',
     title: 'Interpretation',
     vibe: 'Use judgment. Protect culture and member well-being.',
-    emoji: '💜',
-    accent: 'from-pink-300 to-violet-500',
+    emoji: '💛',
+    accent: 'from-accent to-yellow-300 text-ink',
     sections: [
       { number: 63, title: 'Spirit of the Constitution', body: ['This Constitution exists to support the Team, not to replace reasonable judgment.', 'Where a situation is not expressly addressed, the Executive should interpret this Constitution consistently with the Team\'s core purposes:', ['athletic development, social connection, inclusion, and fun.'], "When competitive success conflicts with those purposes, the Team's culture and the well-being of its members shall take priority."] },
     ],
@@ -404,10 +405,15 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
   return (
     <main className='relative overflow-hidden rounded-[2rem] bg-white/95 p-5 shadow-2xl ring-1 ring-white/60 md:p-8'>
       <div className='pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl constitution-float' />
-      <div className='pointer-events-none absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-secondary/20 blur-3xl constitution-float constitution-delay-2' />
+      <div className='pointer-events-none absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-accent/25 blur-3xl constitution-float constitution-delay-2' />
 
-      <section className='relative rounded-[1.75rem] bg-gradient-to-br from-slate-950 via-primary to-secondary p-6 text-white shadow-2xl md:p-8'>
-        <div className='flex flex-wrap items-center gap-3 text-sm font-bold uppercase tracking-[0.25em] text-white/75'>
+      <section className='relative rounded-[1.75rem] bg-gradient-to-br from-secondary via-primary to-splash p-6 text-white shadow-2xl md:p-8'>
+        <img
+          src={badgeUrl}
+          alt='Dodgy Ducks Toronto badge'
+          className='hidden md:block absolute right-8 top-8 h-24 w-24 rounded-full object-cover ring-4 ring-accent shadow-2xl'
+        />
+        <div className='flex flex-wrap items-center gap-3 text-sm font-bold uppercase tracking-[0.25em] text-white/75 md:pr-32'>
           <span>Constitution</span>
           <span className='h-1 w-1 rounded-full bg-white/60' />
           <span>Adopted: [Date]</span>
@@ -417,9 +423,9 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
 
         <div className='mt-10 max-w-3xl'>
           <div className='mb-5 inline-flex rounded-full bg-white/15 px-4 py-2 text-sm font-semibold shadow-lg ring-1 ring-white/20 backdrop-blur'>
-            Constitution of [Team Name]
+            Constitution of the Dodgy Ducks
           </div>
-          <h2 className='text-4xl font-black leading-tight drop-shadow md:text-6xl'>
+          <h2 className='font-display font-normal tracking-wide text-4xl leading-tight drop-shadow md:text-6xl'>
             Built for paddling hard, welcoming loudly, and having fun.
           </h2>
         </div>
@@ -440,7 +446,7 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
 
       <div className='sticky top-0 z-20 mt-6 rounded-full bg-white/80 p-2 shadow-lg ring-1 ring-slate-200 backdrop-blur'>
         <div className='h-3 overflow-hidden rounded-full bg-slate-200'>
-          <div className='h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-500' style={{ width: `${progress}%` }} />
+          <div className='h-full rounded-full bg-gradient-to-r from-primary via-splash to-accent transition-all duration-500' style={{ width: `${progress}%` }} />
         </div>
       </div>
 
@@ -467,7 +473,7 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
                     onClick={() => handleSelectArticle(index)}
                     className={`group rounded-2xl p-3 text-left transition-all duration-300 ${
                       isActive
-                        ? 'bg-primary text-white shadow-lg shadow-primary/25 scale-[1.02]'
+                        ? 'bg-primary text-white shadow-lg shadow-primary/30 scale-[1.02]'
                         : 'bg-white text-slate-700 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-md'
                     }`}
                     aria-current={isActive ? 'page' : undefined}
@@ -492,11 +498,11 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
         >
           <div className='flex flex-col gap-5 md:flex-row md:items-end md:justify-between'>
             <div>
-              <div className={`inline-flex items-center gap-3 rounded-full bg-gradient-to-r ${activeArticle.accent} px-5 py-2 text-sm font-black uppercase tracking-[0.2em] text-white shadow-lg`}>
+              <div className={`inline-flex items-center gap-3 rounded-full bg-gradient-to-r ${activeArticle.accent} px-5 py-2 text-sm font-black uppercase tracking-[0.2em] shadow-lg`}>
                 <span>{activeArticle.emoji}</span>
                 <span>Article {activeArticle.roman}</span>
               </div>
-              <h3 className='mt-4 text-3xl font-black text-slate-900 md:text-5xl'>{activeArticle.title}</h3>
+              <h3 className='mt-4 font-display font-normal tracking-wide text-3xl text-slate-900 md:text-5xl'>{activeArticle.title}</h3>
               <p className='mt-3 max-w-3xl text-lg text-slate-600'>{activeArticle.vibe}</p>
             </div>
 
@@ -513,7 +519,7 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
                 style={{ animationDelay: `${sectionIndex * 80}ms` }}
               >
                 <div className='flex flex-wrap items-center gap-3'>
-                  <span className='flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-lg font-black text-white shadow-md'>
+                  <span className='flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-lg font-black text-white shadow-md'>
                     {section.number}
                   </span>
                   <h4 className='text-2xl font-black text-slate-900'>{section.title}</h4>

@@ -6,7 +6,7 @@ export default function CostSummary({ option, isEditMode = false, onEditFlights 
     <div className="bg-white rounded-xl shadow-lg p-8 mb-6">
       <div className="flex flex-col gap-5 md:flex-row md:justify-between md:items-start mb-6 pb-6 border-b-2 border-gray-200">
         <div>
-          <h2 className="text-3xl font-bold text-gray-800">{option.details}</h2>
+          <h2 className="font-display font-normal tracking-wide text-3xl text-gray-800">{option.details}</h2>
           <p className="text-gray-500 mt-2">Travel add-on and estimated flights are shown separately from the main season cost.</p>
         </div>
         <div className="text-right">

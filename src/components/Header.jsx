@@ -1,3 +1,5 @@
+import badgeUrl from '../assets/brand/dodgy-ducks-badge.webp';
+
 export default function Header({
   isEditMode,
   onToggleEdit,
@@ -18,7 +20,26 @@ export default function Header({
   return (
     <header className='text-white mb-10'>
       <div className='flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center'>
-        <div></div>
+        <button
+          type='button'
+          onClick={() => onTabChange('home')}
+          className='flex items-center gap-4 text-left group'
+          aria-label='Dodgy Ducks home'
+        >
+          <img
+            src={badgeUrl}
+            alt='Dodgy Ducks Toronto badge'
+            className='h-16 w-16 md:h-20 md:w-20 rounded-full object-cover shadow-xl ring-2 ring-accent transition-transform group-hover:-rotate-6'
+          />
+          <div>
+            <h1 className='font-display font-normal text-3xl md:text-4xl text-white tracking-wide drop-shadow'>
+              Dodgy Ducks
+            </h1>
+            <div className='text-accent uppercase tracking-[0.25em] text-xs font-bold'>
+              Toronto Dragon Boat
+            </div>
+          </div>
+        </button>
         {canEdit && (
           <div className='flex items-center gap-3'>
             {!isEditMode ? (
@@ -56,7 +77,7 @@ export default function Header({
                 onClick={() => onTabChange(tab.id)}
                 className={`px-5 py-3 rounded-xl font-bold transition-all ${
                   isActive
-                    ? 'bg-white text-primary shadow-md'
+                    ? 'bg-accent text-ink shadow-md'
                     : 'text-white/85 hover:text-white hover:bg-white/10'
                 }`}
                 aria-current={isActive ? 'page' : undefined}

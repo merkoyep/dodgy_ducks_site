@@ -1,23 +1,23 @@
 import hkFestBeforeUrl from '../assets/hkfestbefore.mp4';
-import unknownTeamUrl from '../assets/unknownTeam.png';
+import logoUrl from '../assets/brand/dodgy-ducks-logo.webp';
 
 export default function HomeLanding({ onViewSeason, seasonButtonLabel = 'View season schedule' }) {
   return (
     <main className='grid gap-6'>
       <section className='grid gap-6 lg:grid-cols-[1.15fr_0.85fr] items-stretch'>
-        <div className='bg-white/95 rounded-2xl p-8 md:p-10 shadow-2xl overflow-hidden'>
+        <div className='bg-white rounded-2xl p-8 md:p-10 shadow-2xl overflow-hidden'>
           <div className='grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-center'>
             <div>
               <div className='text-sm font-bold uppercase tracking-[0.25em] text-primary mb-4'>
-                Dragonboat Team
+                Toronto Dragon Boat
               </div>
-              <h2 className='text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-5'>
-                Welcome to Name TBD Dragonboat!
+              <h2 className='font-display font-normal tracking-wide text-4xl md:text-5xl text-gray-900 leading-tight mb-5'>
+                Welcome to the Dodgy Ducks!
               </h2>
               <p className='text-lg md:text-xl text-gray-700 leading-relaxed mb-6'>
-                We are (going to be) a recreational dragon boat team dedicated
-                to athletic development, social connection and friendship,
-                travel, and having fun!
+                The Dodgy Ducks are a recreational dragon boat team based in
+                Toronto, dedicated to athletic development, social connection
+                and friendship, travel, and having fun!
               </p>
               <p className='text-gray-600 leading-relaxed mb-8'>
                 The Team seeks to improve over time and to race to the best of
@@ -35,9 +35,9 @@ export default function HomeLanding({ onViewSeason, seasonButtonLabel = 'View se
             </div>
 
             <img
-              src={unknownTeamUrl}
-              alt='Unknown team mascot'
-              className='hidden lg:block h-full max-h-[360px] w-full rounded-[1.5rem] object-cover shadow-xl ring-1 ring-gray-200'
+              src={logoUrl}
+              alt='Dodgy Ducks Toronto logo: a duck in a cap and sunglasses paddling past the Toronto skyline'
+              className='h-full max-h-[220px] lg:max-h-[360px] w-full object-contain'
             />
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function HomeLanding({ onViewSeason, seasonButtonLabel = 'View se
         </article>
 
         <article className='bg-white/95 rounded-2xl p-8 shadow-2xl ring-1 ring-white/60'>
-          <div className='mb-4 inline-flex rounded-full bg-secondary/10 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-secondary'>
+          <div className='mb-4 inline-flex rounded-full bg-accent/30 px-4 py-2 text-sm font-black uppercase tracking-[0.18em] text-ink'>
             History
           </div>
           <div className='text-gray-700 leading-relaxed'>

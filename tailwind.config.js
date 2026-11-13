@@ -7,8 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#667eea',
-        secondary: '#764ba2',
+        // Dodgy Ducks brand palette
+        primary: '#0077C8', // duck blue
+        secondary: '#0B1F3A', // deep-water navy
+        accent: '#FFD100', // duck yellow (pair with text-ink)
+        splash: '#1EB4F0', // light water blue
+        ink: '#0A0A0A', // logo black
+      },
+      fontFamily: {
+        display: ['"Permanent Marker"', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         'slide-in': {

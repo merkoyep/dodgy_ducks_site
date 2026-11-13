@@ -53,7 +53,7 @@ export default function ItemSection({
                   <div className="font-semibold text-gray-800 mb-1 flex items-center gap-2 flex-wrap">
                     <span>{item.Item}</span>
                     {item._calendarOnly && (
-                      <span className="px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">Calendar scheduled</span>
+                      <span className="px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 text-xs font-bold">Calendar scheduled</span>
                     )}
                   </div>
                   <div className="text-sm text-gray-600 flex items-center gap-2 flex-wrap">

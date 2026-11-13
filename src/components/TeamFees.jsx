@@ -98,7 +98,7 @@ export default function TeamFees({ option }) {
       <section className="bg-white/95 rounded-2xl p-8 shadow-2xl ring-1 ring-white/60">
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <h1 className="text-4xl font-extrabold text-gray-900">Team Fees</h1>
+            <h1 className="font-display font-normal tracking-wide text-4xl text-gray-900">Team Fees</h1>
             <p className="mt-3 max-w-3xl text-gray-700 leading-relaxed">
               Fees are split into three installments: regatta fees, practice fees, and additional costs.
             </p>

@@ -8,7 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Suspense fallback={(
       <div className='min-h-screen flex items-center justify-center'>
-        <div className='text-white text-2xl font-semibold'>Loading...</div>
+        <div className='text-white text-2xl font-semibold'>Loading the Ducks… 🦆</div>
       </div>
     )}>
       <App />
