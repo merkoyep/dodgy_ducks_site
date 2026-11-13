@@ -416,9 +416,9 @@ export default function Constitution({ activeArticleRoman = 'I', onArticleChange
         <div className='flex flex-wrap items-center gap-3 text-sm font-bold uppercase tracking-[0.25em] text-white/75 md:pr-32'>
           <span>Constitution</span>
           <span className='h-1 w-1 rounded-full bg-white/60' />
-          <span>Adopted: [Date]</span>
+          <span>Adopted: October 30, 2026</span>
           <span className='h-1 w-1 rounded-full bg-white/60' />
-          <span>Last Amended: [Date]</span>
+          <span>Last Amended: October 30, 2026</span>
         </div>
 
         <div className='mt-10 max-w-3xl'>
